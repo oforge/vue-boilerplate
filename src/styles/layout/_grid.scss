@@ -1,0 +1,14 @@
+/*
+  css column grid
+ */
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  
+  &-centered {
+    justify-content: center;
+  }
+}

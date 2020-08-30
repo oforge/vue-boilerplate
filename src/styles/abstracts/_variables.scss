@@ -1,0 +1,63 @@
+/*
+  All the variables should be placed here.
+ */
+$breakpoints: (
+  'xs': 480px,
+  's': 540px,
+  'm': 640px,
+  'l': 768px,
+  'xl': 960px,
+  'xxl': 1024px
+);
+
+$colors: (
+  'first': #bada55,
+  'second': #f00baa
+);
+
+$greyTones: (
+  'light': #cccccc,
+  'medium': #999999,
+  'dark': #666666,
+  'darker': #333333
+);
+
+$stateColors: (
+  'warning': #cc3300,
+  'success': #00aa00,
+);
+
+$fonts: (
+  'title': 'Comic Sans',
+  'text': 'Arial',
+  'special': 'monospace'
+);
+
+$fontSizes: (
+  'xs': 12px,
+  's': 14px,
+  'm': 16px,
+  'l': 20px,
+  'xl': 26px,
+  'xxl': 32px
+);
+
+$baseSize: 4px;
+
+$sizes: (
+  '0': 0,
+  'xs': $baseSize,
+  's': $baseSize * 2,
+  'm': $baseSize * 3,
+  'l': $baseSize * 4,
+  'xl': $baseSize * 6,
+  'xxl': $baseSize * 8
+);
+
+$z-indexes: (
+  'toast',
+  'overlay'
+);
+
+$gridColumns: 12;
+$gridGutter: map-get($sizes, 's');
