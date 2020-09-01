@@ -1,0 +1,24 @@
+/*
+  All the default settings should be placed here. Default settings are things like default headings, default fonts, etc...
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font: map-get($fontSizes, 'xxl') map-get($fonts, 'title'), sans-serif;
+}
+h2 {
+  font: map-get($fontSizes, 'xl') map-get($fonts, 'title'), sans-serif;
+}
+h3 {
+  font: map-get($fontSizes, 'l') map-get($fonts, 'title'), sans-serif;
+}
+h4, h5, h6 {
+  font: bold map-get($fontSizes, 'm') map-get($fonts, 'title'), sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,em,strong {
+  line-height: 1.4;
+}

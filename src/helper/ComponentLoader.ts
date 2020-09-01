@@ -1,8 +1,9 @@
-import Vue from "vue";
+import Vue, { AsyncComponent, VueConstructor } from "vue";
 
-export default function loadComponents(components: {}) {
+// TODO: Check if the Types AsyncComponent and VueConstructor are correct
+export default function loadComponents(components: { [key: string]: AsyncComponent | VueConstructor}) {
   const keys = Object.keys(components);
   for (const key of keys) {
-    Vue.component(key, (components as any)[key]);
+    Vue.component(key, components[key]);
   }
 }

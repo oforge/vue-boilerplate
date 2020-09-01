@@ -6,6 +6,7 @@
     <h2>This is h2</h2>
     <stage></stage>
     <sample-component></sample-component>
+    <other-sample-component></other-sample-component>
   </div>
 </template>
 
