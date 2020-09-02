@@ -1,22 +1,29 @@
 <template>
   <div id="app">
-    <div class="test m-v-xxl">
-      This is a test
-    </div>
-    <h2>This is h2</h2>
     <stage></stage>
     <sample-component></sample-component>
     <other-sample-component></other-sample-component>
+
+    <!--
+      Example usage of a button.
+    -->
+    <app-button>
+      <icon iconClass="icon--inline icon--second icon--l" iconName="chevron" />
+      Click me
+    </app-button>
+    <Sprite />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import Stage from "@/components/Stage.vue";
+import Sprite from "@/components/Sprite.vue";
 
 @Component({
   components: {
-    Stage
+    Stage,
+    Sprite
   }
 })
 export default class App extends Vue {}

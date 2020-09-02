@@ -30,7 +30,12 @@ $stateColors: (
 $fonts: (
   'title': 'Comic Sans',
   'text': 'Arial',
-  'special': 'monospace'
+  'special': 'monospace',
+);
+
+$fontColors: (
+  'default': #121212,
+  'inverted': #fefefe,
 );
 
 $fontSizes: (
@@ -52,6 +57,12 @@ $sizes: (
   'l': $baseSize * 4,
   'xl': $baseSize * 6,
   'xxl': $baseSize * 8
+);
+
+$iconSizes: (
+  's': map-get($sizes, 'm'),
+  'm': map-get($sizes, 'l'),
+  'l': map-get($sizes, 'xl')
 );
 
 $z-indexes: (
