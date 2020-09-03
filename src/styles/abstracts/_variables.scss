@@ -16,7 +16,8 @@ $colors: (
 );
 
 $greyTones: (
-  'light': #cccccc,
+  'ultraLight': #cccccc,
+  'light': #bababa,
   'medium': #999999,
   'dark': #666666,
   'darker': #333333
@@ -63,6 +64,13 @@ $iconSizes: (
   's': map-get($sizes, 'm'),
   'm': map-get($sizes, 'l'),
   'l': map-get($sizes, 'xl')
+);
+
+$shadows: (
+  'xs': 0 0 1px 0 map-get($greyTones, 'darker'),
+  's': 0 0 2px 0 map-get($greyTones, 'darker'),
+  'm': 0 0 4px 0 map-get($greyTones, 'darker'),
+  'l': 0 0 8px 0 map-get($greyTones, 'darker')
 );
 
 $z-indexes: ('toast', 'overlay');

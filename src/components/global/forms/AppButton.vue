@@ -23,14 +23,17 @@ export default class AppButton extends Vue {}
   border: none;
   padding: map-get($sizes, 's') map-get($sizes, 'm');
 
-  background: map-get($greyTones, 'light');
+  background: map-get($greyTones, 'ultraLight');
   color: map-get($colors, 'second');
   cursor: pointer;
-  transition: background 0.2s ease-in;
-
+  transition: background 0.2s ease, box-shadow 0.1s ease;
+  box-shadow: map-get($shadows, 's');
   &:hover,
   &:active {
-    background: map-get($greyTones, 'medium');
+    background: map-get($greyTones, 'light');
+  }
+  &:active {
+    box-shadow: map-get($shadows, 'xs');
   }
 }
 </style>

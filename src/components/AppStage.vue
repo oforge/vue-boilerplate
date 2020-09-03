@@ -11,7 +11,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class Stage extends Vue {}
+export default class AppStage extends Vue {}
 </script>
 
 <style lang="scss" scoped>

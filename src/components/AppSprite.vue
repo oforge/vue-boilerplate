@@ -22,5 +22,5 @@
 import { Vue, Component } from 'vue-property-decorator';
 
 @Component
-export default class Sprite extends Vue {}
+export default class AppSprite extends Vue {}
 </script>

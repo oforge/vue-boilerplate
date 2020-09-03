@@ -10,7 +10,7 @@ export default {
     import(/* webpackChunkName: "globalComponents" */ './SampleComponent.vue'),
   'other-sample-component': SampleComponent as VueConstructor,
   'app-icon': () =>
-    import(/* webpackChunkName: "globalComponents" */ './Icon.vue'),
+    import(/* webpackChunkName: "globalComponents" */ './AppIcon.vue'),
   'app-button': () =>
     import(/* webpackChunkName: "globalComponents" */ './forms/AppButton.vue')
 };

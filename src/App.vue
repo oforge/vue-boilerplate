@@ -20,13 +20,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Stage from '@/components/Stage.vue';
-import Sprite from '@/components/Sprite.vue';
+import AppStage from '@/components/AppStage.vue';
+import AppSprite from '@/components/AppSprite.vue';
 
 @Component({
   components: {
-    Stage,
-    Sprite
+    Stage: AppStage,
+    Sprite: AppSprite
   }
 })
 export default class App extends Vue {}
