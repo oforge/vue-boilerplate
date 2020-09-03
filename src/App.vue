@@ -8,7 +8,10 @@
       Example usage of a button.
     -->
     <app-button>
-      <icon iconClass="icon--inline icon--second icon--l" iconName="chevron" />
+      <app-icon
+        iconClass="icon--inline icon--second icon--l"
+        iconName="chevron"
+      />
       Click me
     </app-button>
     <Sprite />
@@ -16,9 +19,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import Stage from "@/components/Stage.vue";
-import Sprite from "@/components/Sprite.vue";
+import { Component, Vue } from 'vue-property-decorator';
+import Stage from '@/components/Stage.vue';
+import Sprite from '@/components/Sprite.vue';
 
 @Component({
   components: {
@@ -35,12 +38,12 @@ export default class App extends Vue {}
 -->
 <style lang="scss">
 // Load global styles
-@import "~@/styles/main.scss";
+@import '~@/styles/main.scss';
 
 // Example: We can use variables and mixins, that were injected by webpack.
 h1 {
   color: map-get($colors, first);
-  @include mq("l") {
+  @include mq('l') {
     color: map-get($colors, second);
   }
 }

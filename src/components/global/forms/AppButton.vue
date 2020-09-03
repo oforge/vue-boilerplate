@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component } from 'vue-property-decorator';
 
 @Component
 export default class AppButton extends Vue {}
@@ -26,7 +26,7 @@ export default class AppButton extends Vue {}
   background: map-get($greyTones, 'light');
   color: map-get($colors, 'second');
   cursor: pointer;
-  transition: background .2s ease-in;
+  transition: background 0.2s ease-in;
 
   &:hover,
   &:active {

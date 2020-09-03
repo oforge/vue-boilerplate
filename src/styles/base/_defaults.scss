@@ -15,10 +15,21 @@ h2 {
 h3 {
   font: map-get($fontSizes, 'l') map-get($fonts, 'title'), sans-serif;
 }
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font: bold map-get($fontSizes, 'm') map-get($fonts, 'title'), sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6,p,span,em,strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+em,
+strong {
   line-height: 1.4;
 }

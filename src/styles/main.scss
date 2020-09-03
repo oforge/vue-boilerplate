@@ -10,9 +10,9 @@
 /*
   First we load the base styles. This should be stuff like css reset and base styles
  */
-@import "base/style";
+@import 'base/style';
 
-@import "helper/style";
+@import 'helper/style';
 
 /*
   after all, we include the spacing mixin that was injected from webpack

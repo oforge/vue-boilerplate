@@ -17,7 +17,7 @@
  */
 @mixin spacing() {
   @each $prop, $abbrev in (margin: m, padding: p) {
-    @each $key, $size  in $sizes {
+    @each $key, $size in $sizes {
       .#{$abbrev}-#{$key}.#{$abbrev}-#{$key}.#{$abbrev}-#{$key} {
         #{$prop}: $size;
       }

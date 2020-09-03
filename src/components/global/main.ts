@@ -6,8 +6,11 @@ import SampleComponent from '@/components/global/OtherSampleComponent.vue';
 import { VueConstructor } from 'vue';
 
 export default {
-  "sample-component": () => import(/* webpackChunkName: "globalComponents" */"./SampleComponent.vue"),
-  "other-sample-component": SampleComponent as VueConstructor,
-  "icon": () => import(/* webpackChunkName: "globalComponents" */"./Icon.vue"),
-  "app-button": () => import(/* webpackChunkName: "globalComponents" */"./forms/AppButton.vue"),
+  'sample-component': () =>
+    import(/* webpackChunkName: "globalComponents" */ './SampleComponent.vue'),
+  'other-sample-component': SampleComponent as VueConstructor,
+  'app-icon': () =>
+    import(/* webpackChunkName: "globalComponents" */ './Icon.vue'),
+  'app-button': () =>
+    import(/* webpackChunkName: "globalComponents" */ './forms/AppButton.vue')
 };

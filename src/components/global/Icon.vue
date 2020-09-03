@@ -5,7 +5,10 @@
 -->
 <template>
   <svg class="icon" :class="iconClass">
-    <use v-bind="{'xlink:href':'#' + iconName}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+    <use
+      v-bind="{ 'xlink:href': '#' + iconName }"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    ></use>
   </svg>
 </template>
 
@@ -13,7 +16,7 @@
 import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
-export default class Icon extends Vue {
+export default class AppIcon extends Vue {
   @Prop({ required: true }) private iconClass!: string;
   @Prop({ required: true }) private iconName!: string;
 }
@@ -24,19 +27,19 @@ export default class Icon extends Vue {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: map-get($iconSizes, "s");
-  height: map-get($iconSizes, "s");
+  width: map-get($iconSizes, 's');
+  height: map-get($iconSizes, 's');
 
   &--inline {
     display: inline-flex;
   }
   &--m {
-    width: map-get($iconSizes, "m");
-    height: map-get($iconSizes, "m");
+    width: map-get($iconSizes, 'm');
+    height: map-get($iconSizes, 'm');
   }
   &--l {
-    width: map-get($iconSizes, "l");
-    height: map-get($iconSizes, "l");
+    width: map-get($iconSizes, 'l');
+    height: map-get($iconSizes, 'l');
   }
   &--first {
     fill: map-get($colors, 'first');

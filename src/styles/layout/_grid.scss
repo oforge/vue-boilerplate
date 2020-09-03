@@ -51,7 +51,7 @@
   display: grid;
   grid-template-columns: repeat($gridColumns, 1fr);
   gap: $gridGap;
-  
+
   &--no-gap {
     gap: 0;
   }
