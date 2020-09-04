@@ -12,5 +12,7 @@ export default {
   'app-icon': () =>
     import(/* webpackChunkName: "globalComponents" */ './AppIcon.vue'),
   'app-button': () =>
-    import(/* webpackChunkName: "globalComponents" */ './forms/AppButton.vue')
+    import(/* webpackChunkName: "globalComponents" */ './forms/AppButton.vue'),
+  'base-input': () =>
+    import(/* webpackChunkName: "globalComponents" */ './forms/BaseInput.vue')
 };

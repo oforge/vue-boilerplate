@@ -60,6 +60,8 @@ $sizes: (
   'xxl': $baseSize * 8
 );
 
+$formSize: map-get($sizes, 'xxl');
+
 $iconSizes: (
   's': map-get($sizes, 'm'),
   'm': map-get($sizes, 'l'),

@@ -14,6 +14,7 @@
       />
       Click me
     </app-button>
+    <base-input iconBefore="chevron" iconAfter="chevron" />
     <Sprite />
   </div>
 </template>
