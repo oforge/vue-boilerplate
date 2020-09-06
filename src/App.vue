@@ -1,21 +1,19 @@
 <template>
   <div id="app">
-    <stage></stage>
-    <sample-component></sample-component>
-    <other-sample-component></other-sample-component>
+    <stage />
 
     <!--
       Example usage of a button.
     -->
-    <app-button>
-      <app-icon
+    <base-button>
+      <base-icon
         iconClass="icon--inline icon--second icon--l"
         iconName="chevron"
       />
       Click me
-    </app-button>
+    </base-button>
     <base-input iconBefore="chevron" iconAfter="chevron" />
-    <Sprite />
+    <sprite />
   </div>
 </template>
 

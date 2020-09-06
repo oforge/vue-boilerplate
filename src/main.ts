@@ -6,10 +6,9 @@ import store from './store';
 /*
   Here we inject the global components and load them with a helper function
  */
-import globalComponents from '@/components/global/main';
-import loadComponents from '@/helper/ComponentLoader';
+import GlobalComponentLoader from '@/components/global/main';
 
-loadComponents(globalComponents);
+(new GlobalComponentLoader).bootstrap();
 
 Vue.config.productionTip = false;
 

@@ -57,5 +57,11 @@ export default Vue.extend({
   &--chevron-up {
     transform: rotateZ(90deg);
   }
+  &--chevron-right {
+    transform: rotateZ(180deg);
+  }
+  &--chevron-down {
+    transform: rotateZ(270deg);
+  }
 }
 </style>

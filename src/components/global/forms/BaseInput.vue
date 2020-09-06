@@ -1,13 +1,13 @@
 <template>
   <div class="form-control">
     <label>test</label>
-    <app-icon
+    <base-icon
       iconClass="form-element__before icon--m"
       :iconName="iconBefore"
       v-if="iconBefore"
     />
     <input class="form-element" type="text" />
-    <app-icon
+    <base-icon
       iconClass="form-element__after icon--m"
       :iconName="iconAfter"
       v-if="iconAfter"
