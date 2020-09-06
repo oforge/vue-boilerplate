@@ -17,7 +17,15 @@ or **VS Code**. Both IDE's have a very good Vue and TypeScript support.
   - SCSS with dart-sass [x]
   - ESLint with Prettier [x]
   - Lint on save [x]
-  - Save config in dedicated config files [x]  
+  - Save config in dedicated config files [x]
+- We use the following special configurations:
+  - In **`./src/.prettierrc.js`** we define a configuration to check and change quotes to single
+  quotes:
+    ```js
+    module.exports = {
+      singleQuote: true
+    };
+    ```
 - We use **single file components** as .vue files.
 - For Template, Script and Style we will use **2 spaces** as the default indentation.
 - For Script, Style, and Vue based syntax inside Templates we will use **single
@@ -29,6 +37,6 @@ we will stick to that.
   - We have a **`./src/helper`** folder. This one is used for helper classes or helper functions.
   As an example, we have a helper function **`loadComponents()`** that gets all components from an
   exported module and loads them with **`Vue.component()`**.
-  - We have a **`./src/style`** folder. All global styling, that is not direcly part of any component,
+  - We have a **`./src/styles`** folder. All global styling, that is not direcly part of any component,
   should be outsourced to this place. E.g. grid layout classes, spacing utility classes, css-reset
   and so on.
