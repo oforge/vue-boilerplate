@@ -8,10 +8,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue';
 
-@Component
-export default class AppStage extends Vue {}
+export default Vue.extend({
+  name: 'AppStage'
+});
 </script>
 
 <style lang="scss" scoped>

@@ -15,12 +15,14 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-@Component
-export default class BaseInput extends Vue {
-  @Prop() private iconBefore?: string;
-  @Prop() private iconAfter?: string;
-}
+import Vue from 'vue';
+export default Vue.extend({
+  name: 'BaseInput',
+  props: {
+    iconBefore: String,
+    iconAfter: String
+  }
+});
 </script>
 
 <style lang="scss">

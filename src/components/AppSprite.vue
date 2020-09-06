@@ -19,8 +19,9 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
+import Vue from 'vue';
 
-@Component
-export default class AppSprite extends Vue {}
+Vue.extend({
+  name: 'AppSprite'
+});
 </script>

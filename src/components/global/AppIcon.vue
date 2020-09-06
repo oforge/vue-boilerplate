@@ -13,13 +13,21 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator';
 
-@Component
-export default class AppIcon extends Vue {
-  @Prop({ required: true }) private iconClass!: string;
-  @Prop({ required: true }) private iconName!: string;
-}
+import Vue from 'vue';
+export default Vue.extend({
+  name: 'AppIcon',
+  props: {
+    iconClass: {
+      type: String,
+      required: true
+    },
+    iconName: {
+      type: String,
+      required: true
+    }
+  }
+});
 </script>
 
 <style lang="scss">

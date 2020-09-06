@@ -9,10 +9,10 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-
-@Component
-export default class AppButton extends Vue {}
+import Vue from 'vue';
+export default Vue.extend({
+  name: 'AppButton'
+});
 </script>
 
 <style lang="scss">

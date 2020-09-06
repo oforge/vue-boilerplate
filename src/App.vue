@@ -20,17 +20,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import Vue from 'vue';
 import AppStage from '@/components/AppStage.vue';
 import AppSprite from '@/components/AppSprite.vue';
 
-@Component({
+Vue.extend({
   components: {
-    Stage: AppStage,
-    Sprite: AppSprite
+    stage: AppStage,
+    sprite: AppSprite
   }
-})
-export default class App extends Vue {}
+});
 </script>
 
 <!--

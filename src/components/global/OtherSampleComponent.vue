@@ -10,7 +10,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-@Component
-export default class OtherSampleComponent extends Vue {}
+import Vue from 'vue';
+export default Vue.extend({
+  name: 'OtherSampleComponent'
+});
 </script>

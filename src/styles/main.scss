@@ -12,8 +12,15 @@
  */
 @import 'base/style';
 
+/*
+  Helper classes like .flex for flexbox
+ */
 @import 'helper/style';
 
+/*
+  Layout styles like grid
+ */
+@import 'layout/style';
 /*
   after all, we include the spacing mixin that was injected from webpack
  */
