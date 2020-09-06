@@ -1,5 +1,6 @@
 # Oforge Vue conventions and best practices
-This project should be used as a code convention guideline and for future projects.
+This project should be used as a code convention guideline and style/coding guide for
+future projects.
 
 When working on large scale projects. it is always a good idea to have conventions,
 style and code guidelines for the developer team. This makes it easier to understand,
