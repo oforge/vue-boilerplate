@@ -24,7 +24,7 @@ import Vue from 'vue';
 import AppStage from '@/components/AppStage.vue';
 import AppSprite from '@/components/AppSprite.vue';
 
-Vue.extend({
+export default Vue.extend({
   components: {
     stage: AppStage,
     sprite: AppSprite

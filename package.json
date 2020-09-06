@@ -1,6 +1,6 @@
 {
-  "name": "7pvue",
-  "version": "0.1.0",
+  "name": "vue-conventions",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -20,8 +20,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-
-Vue.extend({
+export default Vue.extend({
   name: 'AppSprite'
 });
 </script>

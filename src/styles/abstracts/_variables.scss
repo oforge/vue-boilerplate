@@ -78,4 +78,4 @@ $shadows: (
 $z-indexes: ('toast', 'overlay');
 
 $gridColumns: 12;
-$gridGutter: map-get($sizes, 's');
+$gridGap: map-get($sizes, 's');
