@@ -31,6 +31,7 @@ or **VS Code**. Both IDE's have a very good Vue and TypeScript support.
 - For Template, Script and Style we will use **2 spaces** as the default indentation.
 - For Script, Style, and Vue based syntax inside Templates we will use **single
 quotes** as default quotes.
+- We put a semicolon at the end of a JavaScript / TypeScript statement.
 - For Vue 2 projects we use **`Vue.extend()`** for components. For Vue 3 projects we will use
 **`defineComponent()`**. As long as there will be no real class style component support for Vue 3,
 we will stick to that.
