@@ -6,13 +6,15 @@
       Example usage of a button.
     -->
     <base-button>
-      <base-icon
-        iconClass="icon--inline icon--second icon--l"
-        iconName="chevron"
-      />
+      <base-icon iconClass="icon--inline icon--second icon--l icon--before" iconName="chevron" />
       Click me
     </base-button>
-    <base-input iconBefore="chevron" iconAfter="chevron" />
+    <base-input
+      iconBefore="chevron"
+      iconAfter="chevron"
+      iconBeforeClass="icon--chevron icon--chevron-up"
+      iconAfterClass="icon--chevron icon--chevron-down"
+    />
     <sprite />
   </div>
 </template>

@@ -5,10 +5,7 @@
 -->
 <template>
   <svg class="icon" :class="iconClass">
-    <use
-      v-bind="{ 'xlink:href': '#' + iconName }"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-    ></use>
+    <use v-bind="{ 'xlink:href': '#' + iconName }" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
   </svg>
 </template>
 
@@ -63,5 +60,11 @@ export default Vue.extend({
   &--chevron-down {
     transform: rotateZ(270deg);
   }
+}
+.button .icon--before {
+  margin-left: map-get($sizes, 's') * -1;
+}
+.button .icon--after {
+  margin-right: map-get($sizes, 's') * -1;
 }
 </style>
