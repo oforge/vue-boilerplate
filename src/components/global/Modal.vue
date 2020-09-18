@@ -1,12 +1,12 @@
 <template>
   <transition name="modal">
-    <div v-if="showModal" class="modal">
+    <div class="modal">
       <div class="modal__wrapper">
         <div class="modal__container" :class="{ 'modal__container--isFullwidth': isFullwidth }">
           <button
             v-if="!isNotCloseable"
             class="modal__close-button btn btn-danger"
-            @click="showModal = !showModal"
+            @click="closeModal()"
           >
             X
           </button>
@@ -22,14 +22,10 @@
           </div>
           <div class="modal__footer">
             <slot name="footer">
-              <button
-                v-if="!isNotCloseable"
-                class="btn btn-primary"
-                @click="showModal = !showModal"
-              >
+              <button v-if="!isNotCloseable" class="btn btn-primary" @click="closeModal()">
                 Weiter
-              </button></slot
-            >
+              </button>
+            </slot>
           </div>
         </div>
       </div>
@@ -41,7 +37,20 @@
 import Vue from 'vue';
 export default Vue.extend({
   name: 'ModalView',
+  data() {
+    return {
+      showModal: this.modalVisible || false
+    };
+  },
+  model: {
+    prop: 'modalVisible',
+    event: 'update-modal-visible'
+  },
   props: {
+    modalVisible: {
+      type: Boolean,
+      default: false
+    },
     isNotCloseable: {
       type: Boolean,
       required: false,
@@ -51,11 +60,11 @@ export default Vue.extend({
       type: Boolean,
       required: false,
       default: false
-    },
-    showModal: {
-      type: Boolean,
-      required: false,
-      default: false
+    }
+  },
+  methods: {
+    closeModal() {
+      this.$emit('close');
     }
   }
 });

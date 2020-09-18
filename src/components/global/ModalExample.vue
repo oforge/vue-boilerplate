@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Modal :showModal="showModal"></Modal>
-    <button @click="showModal = !showModal">Öffne Modal</button>
+    <Modal v-if="showModal" @close="showModal = false"></Modal>
+    <button @click="showModal = true">Öffne Modal</button>
   </div>
 </template>
 

@@ -2,13 +2,13 @@
   <div class="form-control">
     <label>test</label>
     <base-icon
-      :iconClass="['form-element__before', 'icon--m', iconBeforeClass]"
+      :iconClass="'form-element__before icon--m ' + iconBeforeClass"
       :iconName="iconBefore"
       v-if="iconBefore"
     />
     <input class="form-element" type="text" />
     <base-icon
-      :iconClass="['form-element__after', 'icon--m', iconAfterClass]"
+      :iconClass="'form-element__after icon--m ' + iconAfterClass"
       :iconName="iconAfter"
       v-if="iconAfter"
     />
