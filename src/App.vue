@@ -16,6 +16,7 @@
       iconAfterClass="icon--chevron icon--chevron-down"
     />
     <sprite />
+    <modal></modal>
   </div>
 </template>
 
@@ -23,11 +24,13 @@
 import Vue from 'vue';
 import AppStage from '@/components/AppStage.vue';
 import AppSprite from '@/components/AppSprite.vue';
+import ModalExample from '@/components/global/ModalExample.vue';
 
 export default Vue.extend({
   components: {
     stage: AppStage,
-    sprite: AppSprite
+    sprite: AppSprite,
+    modal: ModalExample
   }
 });
 </script>
