@@ -7,32 +7,34 @@
 }
 
 h1 {
-  font: map-get($fontSizes, 'xxl') map-get($fonts, 'title'), sans-serif;
+  font: map-get($fontSizes, 'xl') map-get($fonts, 'title'), sans-serif;
+  line-height: $baseLineHeight * 3;
 }
 h2 {
-  font: map-get($fontSizes, 'xl') map-get($fonts, 'title'), sans-serif;
+  font: map-get($fontSizes, 'l') map-get($fonts, 'title'), sans-serif;
+  line-height: $baseLineHeight * 2;
 }
 h3 {
-  font: map-get($fontSizes, 'l') map-get($fonts, 'title'), sans-serif;
+  font: map-get($fontSizes, 'm') map-get($fonts, 'title'), sans-serif;
+  line-height: $baseLineHeight * 2;
 }
 h4,
 h5,
 h6 {
-  font: bold map-get($fontSizes, 'm') map-get($fonts, 'title'), sans-serif;
+  font: bold map-get($fontSizes, 's') map-get($fonts, 'title'), sans-serif;
 }
 
-h1,
-h2,
-h3,
 h4,
 h5,
 h6,
 p,
 span,
 em,
-strong {
-  line-height: 1.4;
+strong,
+sub, sup {
+  font-family: map-get($fonts, 'text');
+  line-height: $baseLineHeight;
 }
-label {
-  display: block;
+sub, sup {
+  font-size: map-get($fontSizes, 'xs');
 }

@@ -2,30 +2,33 @@
   All the variables should be placed here.
  */
 $breakpoints: (
-  'xs': 480px,
-  's': 540px,
-  'm': 640px,
-  'l': 768px,
-  'xl': 960px,
-  'xxl': 1024px
+  'xxs': 480px,
+  'xs': 560px,
+  's': 640px,
+  'm': 768px,
+  'l': 960px,
+  'xl': 1024px,
+  'xxl': 1216px
 );
 
 $colors: (
-  'first': #bada55,
-  'second': #f00baa
+  'first': #0c3d60,
+  'second': #70bed1
 );
 
 $greyTones: (
-  'ultraLight': #cccccc,
-  'light': #bababa,
+  'ultraLight': #f4f1f4,
+  'light': #cccccc,
   'medium': #999999,
   'dark': #666666,
   'darker': #333333
 );
 
 $stateColors: (
-  'warning': #cc3300,
-  'success': #00aa00
+  'error': #e74c3c,
+  'warning': #f1c40f,
+  'info': #8e10ef,
+  'success': #2ecc71
 );
 
 $fonts: (
@@ -35,18 +38,23 @@ $fonts: (
 );
 
 $fontColors: (
-  'default': #121212,
-  'inverted': #fefefe
+  'dark': #121212,
+  'light': #fefefe
 );
 
 $fontSizes: (
-  'xs': 0.75rem,
-  's': 0.85rem,
-  'm': 1rem,
-  'l': 1.25rem,
-  'xl': 1.75rem,
-  'xxl': 2.5rem
+  'xs': 0.875rem,
+  's': 1rem,
+  'm': 1.25rem,
+  'l': 1.75rem,
+  'xl': 2.5rem,
+  'xxl': 3rem
 );
+
+/*
+  For vertical rythm we need the minimum line-height. Every element should have a multiple of this line-height
+ */
+$baseLineHeight: 1.25rem;
 
 $baseSize: 4px;
 

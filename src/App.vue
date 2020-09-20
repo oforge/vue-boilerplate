@@ -1,36 +1,22 @@
 <template>
   <div id="app">
-    <stage />
-
-    <!--
-      Example usage of a button.
-    -->
-    <base-button>
-      <base-icon iconClass="icon--inline icon--second icon--l icon--before" iconName="chevron" />
-      Click me
-    </base-button>
-    <base-input
-      iconBefore="chevron"
-      iconAfter="chevron"
-      iconBeforeClass="icon--chevron icon--chevron-up"
-      iconAfterClass="icon--chevron icon--chevron-down"
-    />
+    <headlines></headlines>
+    <colors></colors>
     <sprite />
-    <modal></modal>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import AppStage from '@/components/AppStage.vue';
 import AppSprite from '@/components/AppSprite.vue';
-import ModalExample from '@/components/global/ModalExample.vue';
+import Headlines from '@/examples/Headlines.vue';
+import Colors from '@/examples/Colors.vue';
 
 export default Vue.extend({
   components: {
-    stage: AppStage,
     sprite: AppSprite,
-    modal: ModalExample
+    headlines: Headlines,
+    colors: Colors
   }
 });
 </script>
@@ -43,14 +29,17 @@ export default Vue.extend({
 // Load global styles
 @import '~@/styles/main.scss';
 
-// Example: We can use variables and mixins, that were injected by webpack.
-h1 {
-  color: map-get($colors, first);
-  @include mq('l') {
-    color: map-get($colors, second);
+.section {
+  padding: map-get($sizes, 'l');
+  padding-bottom: $baseLineHeight * 2;
+
+  &__header {
+    padding: map-get($sizes, 'l');
+    font-size: map-get($fontSizes, 'xxl');
+    line-height: $baseLineHeight * 3;
+    margin-bottom: $baseLineHeight * 2;
+    background: map-get($colors, first);
+    color: map-get($fontColors, light);
   }
-}
-.test {
-  color: map-get($colors, second);
 }
 </style>
