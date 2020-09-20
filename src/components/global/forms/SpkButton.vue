@@ -116,6 +116,7 @@ export default Vue.extend({
 .button-list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   .button {
     margin-right: map-get($sizes, 'xs');

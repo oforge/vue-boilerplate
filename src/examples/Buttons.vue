@@ -13,12 +13,12 @@
         <spk-button class="m-t-xs button--info">Button info</spk-button>
         <spk-button class="m-t-xs button--success">Button success</spk-button>
         <spk-button class="m-t-xs button--first">
-          <spk-icon iconName="cross" />
+          <spk-icon iconClass="icon--cross" iconName="cross" />
           <span>Button with icon left</span>
         </spk-button>
         <spk-button class="m-t-xs button--second">
           <span>Button with icon right</span>
-          <spk-icon iconName="chevron" iconClass="icon--chevron icon--chevron-right" />
+          <spk-icon iconClass="icon--chevron icon--chevron-right" iconName="chevron" />
         </spk-button>
       </div>
     </div>

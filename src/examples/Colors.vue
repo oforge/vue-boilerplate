@@ -18,22 +18,22 @@
         <h3 class="bg-first p-s m-v-xl">Backgrounds</h3>
       </div>
       <div class="column-12">
-        <h3 class="p-s bg-first">
+        <h3 class="m-t-xs p-s bg-first">
           Background first - The quick brown fox jumps over the lazy dog
         </h3>
-        <h3 class="p-s bg-second">
+        <h3 class="m-t-xs p-s bg-second">
           Background second - The quick brown fox jumps over the lazy dog
         </h3>
-        <h3 class="p-s bg-error">
+        <h3 class="m-t-xs p-s bg-error">
           Background error - The quick brown fox jumps over the lazy dog
         </h3>
-        <h3 class="p-s bg-warning">
+        <h3 class="m-t-xs p-s bg-warning">
           Background warning - The quick brown fox jumps over the lazy dog
         </h3>
-        <h3 class="p-s bg-info">
+        <h3 class="m-t-xs p-s bg-info">
           Background info - The quick brown fox jumps over the lazy dog
         </h3>
-        <h3 class="p-s bg-success">
+        <h3 class="m-t-xs p-s bg-success">
           Background success - The quick brown fox jumps over the lazy dog
         </h3>
       </div>
