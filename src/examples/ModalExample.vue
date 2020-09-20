@@ -13,7 +13,7 @@
       <div class="column-12">
         <spk-modal v-if="showModal2" @close="showModal2 = false" modalState="success">
           <template #header>
-            <h3>Dies ist ein etwas längerer Header zum testen</h3>
+            <h3 class="color-light">Dies ist ein etwas längerer Header zum testen</h3>
           </template>
           <template #body>
             <p>
@@ -48,7 +48,7 @@ export default Vue.extend({
   data() {
     return {
       showModal1: false,
-      showModal2: false,
+      showModal2: false
     };
   }
 });
