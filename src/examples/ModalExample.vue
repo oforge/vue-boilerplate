@@ -5,8 +5,36 @@
     </p>
     <div class="row">
       <div class="column-12">
-        <spk-modal v-if="showModal" @close="showModal = false"></spk-modal>
-        <spk-button @click.native="showModal = true">Öffne Modal</spk-button>
+        <spk-modal v-if="showModal1" @close="showModal1 = false"></spk-modal>
+        <spk-button class="button--first" @click.native="showModal1 = true"
+          >Öffne Standard Modal</spk-button
+        >
+      </div>
+      <div class="column-12">
+        <spk-modal v-if="showModal2" @close="showModal2 = false" modalState="success">
+          <template #header>
+            <h3>Dies ist ein etwas längerer Header zum testen</h3>
+          </template>
+          <template #body>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi asperiores,
+              excepturi fugiat modi molestias natus officia perspiciatis possimus, qui quibusdam
+              quis ullam! Architecto facere quo totam unde voluptas voluptatem?
+            </p>
+          </template>
+          <template #footer>
+            <spk-button
+              v-if="!isNotCloseable"
+              class="button--success"
+              @click.native="showModal2 = false"
+            >
+              Weiter
+            </spk-button>
+          </template>
+        </spk-modal>
+        <spk-button class="button--success" @click.native="showModal2 = true">
+          Öffne Success Modal
+        </spk-button>
       </div>
     </div>
   </section>
@@ -19,7 +47,8 @@ export default Vue.extend({
   name: 'ModalExample',
   data() {
     return {
-      showModal: false
+      showModal1: false,
+      showModal2: false,
     };
   }
 });
