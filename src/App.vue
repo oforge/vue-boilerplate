@@ -2,6 +2,7 @@
   <div id="app">
     <headlines></headlines>
     <colors></colors>
+    <buttons></buttons>
     <sprite />
   </div>
 </template>
@@ -11,12 +12,14 @@ import Vue from 'vue';
 import AppSprite from '@/components/AppSprite.vue';
 import Headlines from '@/examples/Headlines.vue';
 import Colors from '@/examples/Colors.vue';
+import Buttons from '@/examples/Buttons.vue';
 
 export default Vue.extend({
   components: {
     sprite: AppSprite,
     headlines: Headlines,
-    colors: Colors
+    colors: Colors,
+    buttons: Buttons
   }
 });
 </script>
@@ -30,12 +33,12 @@ export default Vue.extend({
 @import '~@/styles/main.scss';
 
 .section {
-  padding: map-get($sizes, 'l');
+  padding: map-get($sizes, 's');
   padding-bottom: $baseLineHeight * 2;
 
   &__header {
-    padding: map-get($sizes, 'l');
-    font-size: map-get($fontSizes, 'xxl');
+    padding: map-get($sizes, 'm');
+    font-size: map-get($fontSizes, 'l');
     line-height: $baseLineHeight * 3;
     margin-bottom: $baseLineHeight * 2;
     background: map-get($colors, first);

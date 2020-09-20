@@ -15,12 +15,27 @@
     </div>
     <div class="row">
       <div class="column-12">
-        <h3 class="bg-first">Background first - The quick brown fox jumps over the lazy dog</h3>
-        <h3 class="bg-second">Background second - The quick brown fox jumps over the lazy dog</h3>
-        <h3 class="bg-error">Background error - The quick brown fox jumps over the lazy dog</h3>
-        <h3 class="bg-warning">Background warning - The quick brown fox jumps over the lazy dog</h3>
-        <h3 class="bg-info">Background info - The quick brown fox jumps over the lazy dog</h3>
-        <h3 class="bg-success">Background success - The quick brown fox jumps over the lazy dog</h3>
+        <h3 class="bg-first p-s m-v-xl">Backgrounds</h3>
+      </div>
+      <div class="column-12">
+        <h3 class="p-s bg-first">
+          Background first - The quick brown fox jumps over the lazy dog
+        </h3>
+        <h3 class="p-s bg-second">
+          Background second - The quick brown fox jumps over the lazy dog
+        </h3>
+        <h3 class="p-s bg-error">
+          Background error - The quick brown fox jumps over the lazy dog
+        </h3>
+        <h3 class="p-s bg-warning">
+          Background warning - The quick brown fox jumps over the lazy dog
+        </h3>
+        <h3 class="p-s bg-info">
+          Background info - The quick brown fox jumps over the lazy dog
+        </h3>
+        <h3 class="p-s bg-success">
+          Background success - The quick brown fox jumps over the lazy dog
+        </h3>
       </div>
     </div>
   </section>

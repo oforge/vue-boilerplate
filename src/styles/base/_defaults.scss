@@ -6,6 +6,26 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+em,
+strong,
+input,
+select,
+option,
+button,
+a,
+label,
+sub, sup {
+  color: map-get($fontColors, 'dark');
+}
+
 h1 {
   font: map-get($fontSizes, 'xl') map-get($fonts, 'title'), sans-serif;
   line-height: $baseLineHeight * 3;
@@ -31,7 +51,14 @@ p,
 span,
 em,
 strong,
+input,
+select,
+option,
+button,
+a,
+label,
 sub, sup {
+  font-size: map-get($fontSizes, 's');
   font-family: map-get($fonts, 'text');
   line-height: $baseLineHeight;
 }

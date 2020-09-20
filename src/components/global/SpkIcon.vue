@@ -12,7 +12,7 @@
 <script lang="ts">
 import Vue from 'vue';
 export default Vue.extend({
-  name: 'AppIcon',
+  name: 'SpkIcon',
   props: {
     iconClass: {
       type: String,
@@ -33,6 +33,7 @@ export default Vue.extend({
   justify-content: center;
   width: map-get($iconSizes, 's');
   height: map-get($iconSizes, 's');
+  fill: currentColor;
 
   &--inline {
     display: inline-flex;

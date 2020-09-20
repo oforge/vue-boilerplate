@@ -7,14 +7,14 @@ import Vue from 'vue';
 export default class GlobalComponentLoader extends Vue {
   bootstrap() {
     console.log('call');
-    Vue.component('base-icon', () =>
-      import(/* webpackChunkName: "globalComponents" */ './BaseIcon.vue')
+    Vue.component('spk-icon', () =>
+      import(/* webpackChunkName: "globalComponents" */ './SpkIcon.vue')
     );
-    Vue.component('base-button', () =>
-      import(/* webpackChunkName: "globalComponents" */ './forms/BaseButton.vue')
+    Vue.component('spk-button', () =>
+      import(/* webpackChunkName: "globalComponents" */ './forms/SpkButton.vue')
     );
-    Vue.component('base-input', () =>
-      import(/* webpackChunkName: "globalComponents" */ './forms/BaseInput.vue')
+    Vue.component('spk-input', () =>
+      import(/* webpackChunkName: "globalComponents" */ './forms/SpkInput.vue')
     );
   }
 }
