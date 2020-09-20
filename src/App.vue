@@ -1,25 +1,28 @@
 <template>
   <div id="app">
-    <headlines></headlines>
-    <colors></colors>
-    <buttons></buttons>
-    <sprite />
+    <headlines-example></headlines-example>
+    <colors-example></colors-example>
+    <buttons-example></buttons-example>
+    <modal-example></modal-example>
+    <icon-sprite />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import AppSprite from '@/components/AppSprite.vue';
-import Headlines from '@/examples/Headlines.vue';
-import Colors from '@/examples/Colors.vue';
-import Buttons from '@/examples/Buttons.vue';
+import IconSprite from '@/components/IconSprite.vue';
+import HeadlinesExample from '@/examples/HeadlinesExample.vue';
+import ColorsExample from '@/examples/ColorsExample.vue';
+import ButtonsExample from '@/examples/ButtonsExample.vue';
+import ModalExample from '@/examples/ModalExample.vue';
 
 export default Vue.extend({
   components: {
-    sprite: AppSprite,
-    headlines: Headlines,
-    colors: Colors,
-    buttons: Buttons
+    'icon-sprite': IconSprite,
+    'headlines-example': HeadlinesExample,
+    'colors-example': ColorsExample,
+    'buttons-example': ButtonsExample,
+    'modal-example': ModalExample
   }
 });
 </script>
@@ -33,14 +36,23 @@ export default Vue.extend({
 @import '~@/styles/main.scss';
 
 .section {
-  padding: map-get($sizes, 's');
-  padding-bottom: $baseLineHeight * 2;
+  padding: map-get($sizes, 's') map-get($sizes, 's') $baseLineHeight * 2 map-get($sizes, 's');
 
   &__header {
-    padding: map-get($sizes, 'm');
+    padding: map-get($sizes, 'xs') map-get($sizes, 'l');
     font-size: map-get($fontSizes, 'l');
     line-height: $baseLineHeight * 3;
     margin-bottom: $baseLineHeight * 2;
+    border-bottom: 4px solid map-get($colors, 'second');
+    background: map-get($colors, first);
+    color: map-get($fontColors, light);
+  }
+  &__sub-header {
+    padding: map-get($sizes, 'xs') map-get($sizes, 'l');
+    font-size: map-get($fontSizes, 'm');
+    line-height: $baseLineHeight * 2;
+    margin: $baseLineHeight * 2 0;
+    border-bottom: 4px solid map-get($colors, 'second');
     background: map-get($colors, first);
     color: map-get($fontColors, light);
   }

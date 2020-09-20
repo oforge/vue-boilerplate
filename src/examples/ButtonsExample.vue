@@ -24,7 +24,7 @@
     </div>
     <div class="row">
       <div class="column-12">
-        <h3 class="bg-first p-s m-v-xl">Button List</h3>
+        <h3 class="section__sub-header">Button List</h3>
       </div>
       <div class="column-12">
         <div class="button-list">

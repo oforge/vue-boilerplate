@@ -16,5 +16,8 @@ export default class GlobalComponentLoader extends Vue {
     Vue.component('spk-input', () =>
       import(/* webpackChunkName: "globalComponents" */ './forms/SpkInput.vue')
     );
+    Vue.component('spk-modal', () =>
+      import(/* webpackChunkName: "globalComponents" */ './SpkModal.vue')
+    );
   }
 }

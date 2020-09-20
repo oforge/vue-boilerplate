@@ -36,7 +36,7 @@
 <script>
 import Vue from 'vue';
 export default Vue.extend({
-  name: 'ModalView',
+  name: 'SpkModal',
   data() {
     return {
       showModal: this.modalVisible || false
