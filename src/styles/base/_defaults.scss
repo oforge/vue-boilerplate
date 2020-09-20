@@ -27,21 +27,27 @@ sub, sup {
 }
 
 h1 {
-  font: map-get($fontSizes, 'xl') map-get($fonts, 'title'), sans-serif;
+  font-size: map-get($fontSizes, 'xl');
+  font-family: map-get($fonts, 'title'), sans-serif;
   line-height: $baseLineHeight * 3;
 }
 h2 {
-  font: map-get($fontSizes, 'l') map-get($fonts, 'title'), sans-serif;
+  font-size: map-get($fontSizes, 'l');
+  font-family: map-get($fonts, 'title'), sans-serif;
   line-height: $baseLineHeight * 2;
 }
 h3 {
-  font: map-get($fontSizes, 'm') map-get($fonts, 'title'), sans-serif;
+  font-size: map-get($fontSizes, 'm');
+  font-family: map-get($fonts, 'title'), sans-serif;
   line-height: $baseLineHeight * 2;
 }
 h4,
 h5,
 h6 {
-  font: bold map-get($fontSizes, 's') map-get($fonts, 'title'), sans-serif;
+  font-size: map-get($fontSizes, 's');
+  font-family: map-get($fonts, 'title'), sans-serif;
+  line-height: $baseLineHeight;
+  font-weight: bold;
 }
 
 h4,
