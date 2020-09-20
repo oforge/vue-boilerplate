@@ -3,13 +3,13 @@
     <div class="modal">
       <div class="modal__wrapper">
         <div class="modal__container" :class="{ 'modal__container--isFullwidth': isFullwidth }">
-          <button
+          <spk-button
             v-if="!isNotCloseable"
-            class="modal__close-button btn btn-danger"
-            @click="closeModal()"
+            class="modal__close-button button button--ghost color-error"
+            @click.native="closeModal()"
           >
-            X
-          </button>
+            <spk-icon iconClass="icon--cross" iconName="cross" />
+          </spk-button>
           <div class="modal__header">
             <slot name="header">
               <h3>
@@ -22,9 +22,13 @@
           </div>
           <div class="modal__footer">
             <slot name="footer">
-              <button v-if="!isNotCloseable" class="btn btn-primary" @click="closeModal()">
+              <spk-button
+                v-if="!isNotCloseable"
+                class="btn btn-primary"
+                @click.native="closeModal()"
+              >
                 Weiter
-              </button>
+              </spk-button>
             </slot>
           </div>
         </div>
@@ -73,18 +77,19 @@ export default Vue.extend({
 <style scoped lang="scss">
 .modal {
   position: fixed;
-  z-index: 9998;
+  z-index: z('modal');
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(map-get($colors, 'dark'), 0.8);
   display: table;
   transition: opacity 0.3s ease;
   &__wrapper {
     display: table-cell;
     vertical-align: middle;
     .modal__container {
+      position: relative;
       width: 20vw;
       margin: 0px auto;
       padding: 20px 30px;
@@ -97,7 +102,9 @@ export default Vue.extend({
         width: 95vw;
       }
       .modal__close-button {
-        float: right;
+        position: absolute;
+        right: 11px;
+        top: 5px;
       }
       .modal__header {
         margin-top: 0;

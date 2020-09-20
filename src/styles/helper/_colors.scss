@@ -16,6 +16,12 @@
 .color-success.color-success {
   color: map-get($stateColors, 'success');
 }
+.color-light.color-light {
+  color: map-get($fontColors, 'light');
+}
+.color-dark.color-dark {
+  color: map-get($fontColors, 'dark');
+}
 
 .bg-first.bg-first {
   background: map-get($colors, 'first');
@@ -39,5 +45,13 @@
 }
 .bg-success.bg-success {
   background: map-get($stateColors, 'success');
+  color: map-get($fontColors, 'light');
+}
+.bg-light.bg-light {
+  background: map-get($colors, 'light');
+  color: map-get($fontColors, 'dark');
+}
+.bg-dark.bg-dark {
+  background: map-get($colors, 'dark');
   color: map-get($fontColors, 'light');
 }

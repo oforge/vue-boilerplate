@@ -13,7 +13,9 @@ $breakpoints: (
 
 $colors: (
   'first': #0c3d60,
-  'second': #70bed1
+  'second': #70bed1,
+  'light': #fefefe,
+  'dark': #121212
 );
 
 $greyTones: (
@@ -21,7 +23,8 @@ $greyTones: (
   'light': #cccccc,
   'medium': #999999,
   'dark': #666666,
-  'darker': #333333
+  'darker': #333333,
+  'ultraDark': map-get($colors, 'dark')
 );
 
 $stateColors: (
@@ -38,8 +41,8 @@ $fonts: (
 );
 
 $fontColors: (
-  'dark': #121212,
-  'light': #fefefe
+  'dark': map-get($colors, 'dark'),
+  'light': map-get($colors, 'light')
 );
 
 $fontSizes: (
@@ -83,7 +86,7 @@ $shadows: (
   'l': 0 0 8px 0 map-get($greyTones, 'darker')
 );
 
-$z-indexes: ('toast', 'overlay');
+$z-indexes: ('toast', 'modal');
 
 $gridColumns: 12;
 $gridGap: map-get($sizes, 's');

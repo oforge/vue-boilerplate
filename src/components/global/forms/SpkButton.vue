@@ -104,6 +104,17 @@ export default Vue.extend({
     }
   }
 
+  &--ghost {
+    background: transparent;
+    &:hover,
+    &:active {
+      background: transparent;
+    }
+    &:active {
+      border: 1px solid transparent;
+    }
+  }
+
   .icon + span,
   span + .icon {
     margin-left: map-get($sizes, s);
