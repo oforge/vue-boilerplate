@@ -117,7 +117,7 @@ export default Vue.extend({
 
   &__body {
     max-height: 56vh;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 
