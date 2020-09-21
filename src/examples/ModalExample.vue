@@ -11,7 +11,7 @@
         >
       </div>
       <div class="column-12">
-        <spk-modal v-if="showModal2" @close="showModal2 = false" modalState="success">
+        <spk-modal v-if="showModal2" @close="showModal2 = false" modalState="success" size="l">
           <template #header>
             <h3 class="color-light">Dies ist ein etwas längerer Header zum testen</h3>
           </template>
@@ -21,13 +21,40 @@
               excepturi fugiat modi molestias natus officia perspiciatis possimus, qui quibusdam
               quis ullam! Architecto facere quo totam unde voluptas voluptatem?
             </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi asperiores,
+              excepturi fugiat modi molestias natus officia perspiciatis possimus, qui quibusdam
+              quis ullam! Architecto facere quo totam unde voluptas voluptatem?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi asperiores,
+              excepturi fugiat modi molestias natus officia perspiciatis possimus, qui quibusdam
+              quis ullam! Architecto facere quo totam unde voluptas voluptatem?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi asperiores,
+              excepturi fugiat modi molestias natus officia perspiciatis possimus, qui quibusdam
+              quis ullam! Architecto facere quo totam unde voluptas voluptatem?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi asperiores,
+              excepturi fugiat modi molestias natus officia perspiciatis possimus, qui quibusdam
+              quis ullam! Architecto facere quo totam unde voluptas voluptatem? Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Alias animi asperiores, excepturi fugiat modi
+              molestias natus officia perspiciatis possimus, qui quibusdam quis ullam! Architecto
+              facere quo totam unde voluptas voluptatem?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi asperiores,
+              excepturi fugiat modi molestias natus officia perspiciatis possimus, qui quibusdam
+              quis ullam! Architecto facere quo totam unde voluptas voluptatem? Lorem ipsum dolor
+              sit amet, consectetur adipisicing elit. Alias animi asperiores, excepturi fugiat modi
+              molestias natus officia perspiciatis possimus, qui quibusdam quis ullam! Architecto
+              facere quo totam unde voluptas voluptatem?
+            </p>
           </template>
           <template #footer>
-            <spk-button
-              v-if="!isNotCloseable"
-              class="button--success"
-              @click.native="showModal2 = false"
-            >
+            <spk-button class="button--success" @click.native="showModal2 = false">
               Weiter
             </spk-button>
           </template>

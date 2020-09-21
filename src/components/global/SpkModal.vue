@@ -1,7 +1,7 @@
 <template>
   <transition name="modal">
     <div class="modal">
-      <div class="modal__container" :class="[isFullwidth ? 'modal__container--isFullwidth' : '']">
+      <div class="modal__container" :class="getSize(size)">
         <spk-button
           v-if="!isNotCloseable"
           class="modal__close-button button button--ghost"
@@ -46,13 +46,11 @@ export default Vue.extend({
     },
     isNotCloseable: {
       type: Boolean,
-      required: false,
       default: false
     },
-    isFullwidth: {
-      type: Boolean,
-      required: false,
-      default: false
+    size: {
+      type: String,
+      default: 's'
     },
     modalState: {
       type: String
@@ -61,6 +59,15 @@ export default Vue.extend({
   methods: {
     closeModal() {
       this.$emit('close');
+    },
+    getSize(modalSize) {
+      if (modalSize === 'm') {
+        return 'modal__container--size-m';
+      }
+      if (modalSize === 'l') {
+        return 'modal__container--size-l';
+      }
+      return '';
     }
   }
 });
@@ -82,12 +89,18 @@ export default Vue.extend({
 
   &__container {
     position: relative;
+    min-width: 300px;
     width: 20vw;
+    max-height: 95vh;
     margin: 0 auto;
     transition: all 0.3s ease;
     background: map-get($colors, 'light');
 
-    &--isFullwidth {
+    &--size-m {
+      width: 50vw;
+    }
+
+    &--size-l {
       width: 95vw;
     }
   }
@@ -103,7 +116,8 @@ export default Vue.extend({
   }
 
   &__body {
-    margin: 20px 0;
+    max-height: 56vh;
+    overflow-y: scroll;
   }
 }
 
