@@ -43,18 +43,18 @@ export default Vue.extend({
     font-size: map-get($fontSizes, 'l');
     line-height: $baseLineHeight * 3;
     margin-bottom: $baseLineHeight * 2;
-    border-bottom: 4px solid map-get($colors, 'second');
-    background: map-get($colors, first);
-    color: map-get($fontColors, light);
+    border-bottom: 4px solid rgba(map-get($colors, 'second'), 1);
+    background: rgba(map-get($colors, 'dark'), 0.8);
+    color: map-get($fontColors, 'light');
   }
   &__sub-header {
     padding: map-get($sizes, 'xs') map-get($sizes, 'l');
     font-size: map-get($fontSizes, 'm');
     line-height: $baseLineHeight * 2;
     margin: $baseLineHeight * 2 0;
-    border-bottom: 4px solid map-get($colors, 'second');
-    background: map-get($colors, first);
-    color: map-get($fontColors, light);
+    border-bottom: 4px solid rgba(map-get($colors, 'second'), 1);
+    background: rgba(map-get($colors, 'dark'), 0.8);
+    color: map-get($fontColors, 'light');
   }
 }
 </style>

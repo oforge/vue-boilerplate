@@ -15,7 +15,7 @@
     </div>
     <div class="row">
       <div class="column-12">
-        <h3 class="bg-first p-s m-v-xl">Backgrounds</h3>
+        <p class="section__sub-header">Backgrounds</p>
       </div>
       <div class="column-12">
         <h3 class="m-t-xs p-s bg-first">

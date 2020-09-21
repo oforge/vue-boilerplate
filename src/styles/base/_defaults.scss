@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: map-get($colors, 'first');
+  color: map-get($colors, 'light');
+}
+
 h1,
 h2,
 h3,
