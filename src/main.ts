@@ -8,7 +8,7 @@ import store from './store';
  */
 import GlobalComponentLoader from '@/components/global/main';
 
-(new GlobalComponentLoader).bootstrap();
+new GlobalComponentLoader().bootstrap();
 
 Vue.config.productionTip = false;
 

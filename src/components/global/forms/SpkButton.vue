@@ -45,7 +45,7 @@ export default Vue.extend({
       background: darken(map-get($colors, 'first'), 5%);
     }
     &:active {
-      border: 1px solid lighten(map-get($colors, 'first'), 10%);
+      border: 1px solid lighten(map-get($colors, 'first'), 30%);
     }
   }
 
@@ -67,7 +67,7 @@ export default Vue.extend({
       background: darken(map-get($stateColors, 'error'), 5%);
     }
     &:active {
-      border: 1px solid lighten(map-get($stateColors, 'error'), 5%);
+      border: 1px solid lighten(map-get($stateColors, 'error'), 20%);
     }
   }
 
@@ -89,7 +89,7 @@ export default Vue.extend({
       background: darken(map-get($stateColors, 'info'), 5%);
     }
     &:active {
-      border: 1px solid lighten(map-get($stateColors, 'info'), 10%);
+      border: 1px solid lighten(map-get($stateColors, 'info'), 20%);
     }
   }
 
