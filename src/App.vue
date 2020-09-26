@@ -4,6 +4,7 @@
     <colors-example></colors-example>
     <buttons-example></buttons-example>
     <modal-example></modal-example>
+    <forms-example></forms-example>
     <icon-sprite />
   </div>
 </template>
@@ -15,6 +16,7 @@ import HeadlinesExample from '@/examples/HeadlinesExample.vue';
 import ColorsExample from '@/examples/ColorsExample.vue';
 import ButtonsExample from '@/examples/ButtonsExample.vue';
 import ModalExample from '@/examples/ModalExample.vue';
+import FormsExample from '@/examples/FormsExample.vue';
 
 export default Vue.extend({
   components: {
@@ -22,7 +24,8 @@ export default Vue.extend({
     'headlines-example': HeadlinesExample,
     'colors-example': ColorsExample,
     'buttons-example': ButtonsExample,
-    'modal-example': ModalExample
+    'modal-example': ModalExample,
+    'forms-example': FormsExample
   }
 });
 </script>

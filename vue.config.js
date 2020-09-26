@@ -15,8 +15,7 @@ module.exports = {
           change the injection here as well.
          */
         prependData: `
-          @import "~@/styles/abstracts/_variables.scss";
-          @import "~@/styles/abstracts/_mixins.scss";
+          @import "~@/styles/abstracts/_style.scss";
         `
       }
     }
