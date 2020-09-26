@@ -73,7 +73,7 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .modal {
   position: fixed;
   z-index: z('modal');

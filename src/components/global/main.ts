@@ -9,7 +9,8 @@ export default class GlobalComponentLoader extends Vue {
     console.log('call');
     Vue.component('spk-icon', () => import(/* webpackChunkName: "globalComponents" */ './SpkIcon.vue'));
     Vue.component('spk-button', () => import(/* webpackChunkName: "globalComponents" */ './forms/SpkButton.vue'));
-    Vue.component('spk-input', () => import(/* webpackChunkName: "globalComponents" */ './forms/SpkInput.vue'));
+    Vue.component('spk-text', () => import(/* webpackChunkName: "globalComponents" */ './forms/SpkText.vue'));
+    Vue.component('spk-number', () => import(/* webpackChunkName: "globalComponents" */ './forms/SpkNumber.vue'));
     Vue.component('spk-modal', () => import(/* webpackChunkName: "globalComponents" */ './SpkModal.vue'));
   }
 }

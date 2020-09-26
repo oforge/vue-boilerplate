@@ -5,12 +5,11 @@
     </p>
     <div class="row">
       <div class="column-12">
-        <spk-input name="example" id="example" label="example" v-model="example" placeholder="Your text"></spk-input>
+        <spk-text name="example" id="example" label="example" v-model="example" placeholder="Your text"></spk-text>
       </div>
       <div class="column-12">
-        <spk-input
+        <spk-text
           name="example2"
-          type="number"
           id="example2"
           label="example2"
           v-model="example2"
@@ -20,10 +19,10 @@
           <template #iconBefore>
             <spk-icon iconName="chevron" iconClass="icon--chevron icon--chevron-right"></spk-icon>
           </template>
-        </spk-input>
+        </spk-text>
       </div>
       <div class="column-12">
-        <spk-input
+        <spk-text
           name="example3"
           id="example3"
           label="example3"
@@ -34,7 +33,10 @@
           <template #iconAfter>
             <spk-icon iconName="cross" iconClass="icon--cross"></spk-icon>
           </template>
-        </spk-input>
+        </spk-text>
+      </div>
+      <div class="column-12">
+        <spk-number name="mynumber" id="mynumber" label="my number" v-model="mynumber" placeholder="Your number"></spk-number>
       </div>
     </div>
   </section>
@@ -49,7 +51,8 @@ export default Vue.extend({
     return {
       example: '',
       example2: '',
-      example3: ''
+      example3: '',
+      mynumber: 0
     };
   }
 });

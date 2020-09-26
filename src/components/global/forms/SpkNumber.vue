@@ -4,7 +4,8 @@
     <slot name="iconBefore"></slot>
     <input
       :id="id"
-      class="form__input form__input--text"
+      type="number"
+      class="form__input form__input--number"
       :class="{
         'form__input--has-icon-before': !!$slots['iconBefore'],
         'form__input--has-icon-after': !!$slots['iconAfter']
@@ -19,12 +20,12 @@
 import Vue from 'vue';
 import { baseInputMixin } from '@/mixins/baseInputMixin';
 export default Vue.extend({
-  name: 'SpkInput',
+  name: 'SpkNumber',
   mixins: [baseInputMixin]
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $iconSize: $formSize / 2.5;
 $controlGap: map-get($sizes, 's');
 .form {
