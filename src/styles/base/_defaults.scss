@@ -10,6 +10,9 @@
   background: map-get($colors, 'first');
   color: map-get($colors, 'light');
 }
+::placeholder {
+  color: map-get($greyTones, 'dark');
+}
 
 h1,
 h2,

@@ -1,16 +1,15 @@
 <template>
   <div class="form__control" :class="state ? 'form__control--' + state : ''">
-    <label :for="name" class="form__label">{{ label }}</label>
+    <label :for="id" class="form__label">{{ label }}</label>
     <slot name="iconBefore"></slot>
     <input
-      :name="name"
       :id="id"
       class="form__input form__input--text"
       :class="{
         'form__input--has-icon-before': !!$slots['iconBefore'],
         'form__input--has-icon-after': !!$slots['iconAfter']
       }"
-      type="text"
+      v-bind="$attrs"
       @input="updateValue"
     />
     <slot name="iconAfter"></slot>
@@ -18,30 +17,16 @@
 </template>
 <script lang="ts">
 import Vue from 'vue';
+import { baseInputMixin } from '@/mixins/baseInputMixin';
 export default Vue.extend({
   name: 'SpkInput',
-  props: {
-    label: String,
-    name: {
-      type: String,
-      required: true
-    },
-    id: {
-      type: String,
-      required: true
-    },
-    state: String
-  },
-  methods: {
-    updateValue(event: InputEvent) {
-      this.$emit('input', (event.target as HTMLInputElement).value);
-    }
-  }
+  mixins: [baseInputMixin]
 });
 </script>
 
 <style lang="scss">
 $iconSize: $formSize / 2.5;
+$controlGap: map-get($sizes, 's');
 .form {
   &__control {
     position: relative;
@@ -78,13 +63,13 @@ $iconSize: $formSize / 2.5;
   }
   &__input {
     border: 1px solid map-get($greyTones, 'light');
-    padding: 0 map-get($sizes, 's');
+    padding: 0 $controlGap;
     height: $formSize;
     &--has-icon-before {
-      padding-left: $formSize;
+      padding-left: $controlGap * 2 + $iconSize;
     }
-    &--has-icon-before {
-      padding-right: $formSize;
+    &--has-icon-after {
+      padding-right: $controlGap * 2 + $iconSize;
     }
     width: 100%;
     &:focus {
@@ -102,11 +87,9 @@ $iconSize: $formSize / 2.5;
   margin-bottom: ($iconSize / 2 * -1);
 }
 .form__label + .icon {
-  left: $formSize / 2;
-  margin-left: ($iconSize / 4 * -1);
+  left: map-get($sizes, 's');
 }
 .form__input + .icon {
-  right: $formSize / 2;
-  margin-right: ($iconSize / 4 * -1);
+  right: map-get($sizes, 's');
 }
 </style>
