@@ -1,25 +1,22 @@
 <template>
   <div class="form__control" :class="state ? 'form__control--' + state : ''">
     <label :for="id" class="form__label">{{ label }}</label>
-    <input
-      :id="id"
-      type="checkbox"
-      class="form__input form__input--checkbox"
-      :checked="value"
-      v-bind="$attrs"
-      @click="updateChecked"
-    />
+    <input :id="id" type="radio" class="form__input form__input--radio" v-bind="$attrs" @click="updateValue" />
   </div>
 </template>
 <script lang="ts">
 import Vue from 'vue';
 import { baseInputMixin } from '@/mixins/baseInputMixin';
 export default Vue.extend({
-  name: 'SpkCheckbox',
+  name: 'SpkRadio',
   mixins: [baseInputMixin],
+  props: {
+    vAlue: String
+  },
   methods: {
-    updateChecked(event: InputEvent) {
-      this.$emit('input', (event.target as HTMLInputElement).checked);
+    updateValue() {
+      // TODO: This looks so wrong
+      this.$emit('input', this.vAlue);
     }
   }
 });
@@ -62,8 +59,9 @@ $controlGap: map-get($sizes, 's');
     display: block;
     cursor: pointer;
   }
-  &__input--checkbox {
+  &__input--radio {
     border: 1px solid map-get($greyTones, 'light');
+    border-radius: map-get($radius, 'xxl');
     padding: 0 $controlGap;
     height: $formSize / 2;
     width: $formSize / 2;

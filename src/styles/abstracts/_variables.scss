@@ -86,6 +86,15 @@ $shadows: (
   'l': 0 0 8px 0 map-get($greyTones, 'darker')
 );
 
+$radius: (
+  'xs': $baseSize,
+  's': $baseSize * 2,
+  'm': $baseSize * 3,
+  'l': $baseSize * 4,
+  'xl': $baseSize * 6,
+  'xxl': 100%
+);
+
 $z-indexes: ('toast', 'modal');
 
 $gridColumns: 12;

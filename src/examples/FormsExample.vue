@@ -53,6 +53,11 @@
           v-model="mycheck"
         ></spk-checkbox>
       </div>
+      <div class="column-12">
+        <spk-radio name="myradio" id="myradio1" label="spk-radio 1" vAlue="radio 1" v-model="myradio"></spk-radio>
+        <spk-radio name="myradio" id="myradio2" label="spk-radio 2" vAlue="radio 2" v-model="myradio"></spk-radio>
+        <p>selected value: {{ myradio }}</p>
+      </div>
     </div>
   </section>
 </template>
@@ -68,7 +73,8 @@ export default Vue.extend({
       example2: '',
       example3: '',
       mynumber: 0,
-      mycheck: true
+      mycheck: true,
+      myradio: ''
     };
   }
 });

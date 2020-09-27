@@ -8,7 +8,7 @@ export const baseInputMixin: ComponentOptions<Vue> = {
       type: String,
       required: true
     },
-    value: [String, Number],
+    value: [String, Number, Boolean],
     state: String
   },
   methods: {
