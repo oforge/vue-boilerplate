@@ -36,7 +36,13 @@
         </spk-text>
       </div>
       <div class="column-12">
-        <spk-number name="mynumber" id="mynumber" label="my number" v-model="mynumber" placeholder="Your number"></spk-number>
+        <spk-number
+          name="mynumber"
+          id="mynumber"
+          label="my number"
+          v-model="mynumber"
+          placeholder="Your number"
+        ></spk-number>
       </div>
     </div>
   </section>
