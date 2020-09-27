@@ -3,7 +3,7 @@
   Here we simply use the button with a slot so that every parent component can alter it easily.
 -->
 <template>
-  <button class="button">
+  <button class="btn">
     <slot><span>Submit</span></slot>
   </button>
 </template>
@@ -15,8 +15,8 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss" scoped>
-.button {
+<style lang="scss">
+.btn {
   display: flex;
   align-items: center;
   appearance: none;
@@ -38,25 +38,25 @@ export default Vue.extend({
     display: inline-flex;
   }
 
-  &--first {
-    background: map-get($colors, 'first');
+  &--primary {
+    background: map-get($colors, 'primary');
     &:hover,
     &:active {
-      background: darken(map-get($colors, 'first'), 5%);
+      background: darken(map-get($colors, 'primary'), 5%);
     }
     &:active {
-      border: 1px solid lighten(map-get($colors, 'first'), 30%);
+      border: 1px solid lighten(map-get($colors, 'primary'), 30%);
     }
   }
 
-  &--second {
-    background: map-get($colors, 'second');
+  &--secondary {
+    background: map-get($colors, 'secondary');
     &:hover,
     &:active {
-      background: darken(map-get($colors, 'second'), 5%);
+      background: darken(map-get($colors, 'secondary'), 5%);
     }
     &:active {
-      border: 1px solid lighten(map-get($colors, 'second'), 5%);
+      border: 1px solid lighten(map-get($colors, 'secondary'), 5%);
     }
   }
 
@@ -124,12 +124,12 @@ export default Vue.extend({
   }
 }
 
-.button-list {
+.btn-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 
-  .button {
+  .btn {
     margin-right: map-get($sizes, 'xs');
 
     &:last-child {

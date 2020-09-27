@@ -5,13 +5,12 @@
     <buttons-example></buttons-example>
     <modal-example></modal-example>
     <forms-example></forms-example>
-    <icon-sprite />
+    <spk-sprite />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import IconSprite from '@/components/IconSprite.vue';
 import HeadlinesExample from '@/examples/HeadlinesExample.vue';
 import ColorsExample from '@/examples/ColorsExample.vue';
 import ButtonsExample from '@/examples/ButtonsExample.vue';
@@ -20,7 +19,6 @@ import FormsExample from '@/examples/FormsExample.vue';
 
 export default Vue.extend({
   components: {
-    'icon-sprite': IconSprite,
     'headlines-example': HeadlinesExample,
     'colors-example': ColorsExample,
     'buttons-example': ButtonsExample,
@@ -46,7 +44,7 @@ export default Vue.extend({
     font-size: map-get($fontSizes, 'l');
     line-height: $baseLineHeight * 3;
     margin-bottom: $baseLineHeight * 2;
-    border-bottom: 4px solid rgba(map-get($colors, 'second'), 1);
+    border-bottom: 4px solid rgba(map-get($colors, 'secondary'), 1);
     background: rgba(map-get($colors, 'dark'), 0.8);
     color: map-get($fontColors, 'light');
   }
@@ -55,7 +53,7 @@ export default Vue.extend({
     font-size: map-get($fontSizes, 'm');
     line-height: $baseLineHeight * 2;
     margin: $baseLineHeight * 2 0;
-    border-bottom: 4px solid rgba(map-get($colors, 'second'), 1);
+    border-bottom: 4px solid rgba(map-get($colors, 'secondary'), 1);
     background: rgba(map-get($colors, 'dark'), 0.8);
     color: map-get($fontColors, 'light');
   }

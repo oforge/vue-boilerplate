@@ -7,7 +7,7 @@
 }
 
 ::selection {
-  background: map-get($colors, 'first');
+  background: map-get($colors, 'primary');
   color: map-get($colors, 'light');
 }
 ::placeholder {

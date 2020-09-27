@@ -4,13 +4,13 @@
       <div class="modal__container" :class="getSize(size)">
         <spk-button
           v-if="!isNotCloseable"
-          class="modal__close-button button button--ghost"
-          :class="modalState ? 'color-light' : 'color-dark'"
+          class="modal__close-button button btn--ghost"
+          :class="modalState ? 'color--light' : 'color--dark'"
           @click.native="closeModal()"
         >
           <spk-icon iconClass="icon--cross" iconName="cross" />
         </spk-button>
-        <div class="modal__header p-l-s p-r-xxl" :class="modalState ? 'bg-' + modalState : ''">
+        <div class="modal__header p-l-s p-r-xxl" :class="modalState ? 'bg--' + modalState : ''">
           <slot name="header">
             <h3>
               Default header
@@ -24,7 +24,7 @@
         </div>
         <div class="modal__footer p-s">
           <slot name="footer">
-            <spk-button v-if="!isNotCloseable" class="button--first" @click.native="closeModal()">
+            <spk-button v-if="!isNotCloseable" class="btn--primary" @click.native="closeModal()">
               Weiter
             </spk-button>
           </slot>
@@ -73,7 +73,7 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .modal {
   position: fixed;
   z-index: z('modal');

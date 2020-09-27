@@ -26,7 +26,7 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .icon {
   display: flex;
   align-items: center;
@@ -46,11 +46,11 @@ export default Vue.extend({
     width: map-get($iconSizes, 'l');
     height: map-get($iconSizes, 'l');
   }
-  &--first {
-    fill: map-get($colors, 'first');
+  &--primary {
+    fill: map-get($colors, 'primary');
   }
-  &--second {
-    fill: map-get($colors, 'second');
+  &--secondary {
+    fill: map-get($colors, 'secondary');
   }
   &--chevron-up {
     transform: rotateZ(90deg);
@@ -62,10 +62,10 @@ export default Vue.extend({
     transform: rotateZ(270deg);
   }
 }
-.button .icon--before {
+.btn .icon--before {
   margin-left: map-get($sizes, 's') * -1;
 }
-.button .icon--after {
+.btn .icon--after {
   margin-right: map-get($sizes, 's') * -1;
 }
 </style>

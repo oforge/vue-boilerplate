@@ -1,27 +1,33 @@
 <template>
   <div class="form__control" :class="state ? 'form__control--' + state : ''">
     <label :for="id" class="form__label">{{ label }}</label>
-    <slot name="iconBefore"></slot>
     <input
       :id="id"
-      type="text"
-      class="form__input form__input--text"
-      :class="{
-        'form__input--has-icon-before': !!$slots['iconBefore'],
-        'form__input--has-icon-after': !!$slots['iconAfter']
-      }"
+      type="checkbox"
+      class="form__input form__input--checkbox"
+      :checked="value"
       v-bind="$attrs"
-      @input="updateValue"
+      @click="updateChecked"
     />
-    <slot name="iconAfter"></slot>
   </div>
 </template>
 <script lang="ts">
 import Vue from 'vue';
 import { baseInputMixin } from '@/mixins/baseInputMixin';
 export default Vue.extend({
-  name: 'SpkText',
-  mixins: [baseInputMixin]
+  name: 'SpkCheckbox',
+  mixins: [baseInputMixin],
+  props: {
+    value: {
+      type: Boolean,
+      default: false
+    }
+  },
+  methods: {
+    updateChecked(event: InputEvent) {
+      this.$emit('input', (event.target as HTMLInputElement).checked);
+    }
+  }
 });
 </script>
 
@@ -62,35 +68,18 @@ $controlGap: map-get($sizes, 's');
     display: block;
     cursor: pointer;
   }
-  &__input {
+  &__input--checkbox {
     border: 1px solid map-get($greyTones, 'light');
     padding: 0 $controlGap;
-    height: $formSize;
-    &--has-icon-before {
-      padding-left: $controlGap * 2 + $iconSize;
+    height: $formSize / 2;
+    width: $formSize / 2;
+    &:checked {
+      background: map-get($colors, 'primary');
     }
-    &--has-icon-after {
-      padding-right: $controlGap * 2 + $iconSize;
-    }
-    width: 100%;
     &:focus {
       border-color: map-get($greyTones, 'medium');
       box-shadow: 0 0 1px map-get($greyTones, 'light');
     }
   }
-}
-.form__control .icon {
-  position: absolute;
-  width: $iconSize;
-  height: $iconSize;
-  bottom: $formSize / 2;
-  pointer-events: none;
-  margin-bottom: ($iconSize / 2 * -1);
-}
-.form__label + .icon {
-  left: map-get($sizes, 's');
-}
-.form__input + .icon {
-  right: map-get($sizes, 's');
 }
 </style>

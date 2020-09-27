@@ -6,12 +6,12 @@
     <div class="row">
       <div class="column-12">
         <spk-modal v-if="showModal1" @close="showModal1 = false"></spk-modal>
-        <spk-button class="button--first" @click.native="showModal1 = true">Öffne Standard Modal</spk-button>
+        <spk-button class="btn--primary" @click.native="showModal1 = true">Öffne Standard Modal</spk-button>
       </div>
       <div class="column-12">
         <spk-modal v-if="showModal2" @close="showModal2 = false" modalState="success" size="l">
           <template #header>
-            <h3 class="color-light">Dies ist ein etwas längerer Header zum testen</h3>
+            <h3 class="color--light">Dies ist ein etwas längerer Header zum testen</h3>
           </template>
           <template #body>
             <p>
@@ -50,12 +50,12 @@
             </p>
           </template>
           <template #footer>
-            <spk-button class="button--success" @click.native="showModal2 = false">
+            <spk-button class="btn--success" @click.native="showModal2 = false">
               Weiter
             </spk-button>
           </template>
         </spk-modal>
-        <spk-button class="button--success" @click.native="showModal2 = true">
+        <spk-button class="btn--success" @click.native="showModal2 = true">
           Öffne Success Modal
         </spk-button>
       </div>

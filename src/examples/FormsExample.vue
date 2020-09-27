@@ -5,13 +5,13 @@
     </p>
     <div class="row">
       <div class="column-12">
-        <spk-text name="example" id="example" label="example" v-model="example" placeholder="Your text"></spk-text>
+        <spk-text name="example" id="example" label="spk-text" v-model="example" placeholder="Your text"></spk-text>
       </div>
       <div class="column-12">
         <spk-text
           name="example2"
           id="example2"
-          label="example2"
+          label="spk-text"
           v-model="example2"
           state="success"
           placeholder="Your number"
@@ -25,7 +25,7 @@
         <spk-text
           name="example3"
           id="example3"
-          label="example3"
+          label="spk-text"
           v-model="example3"
           state="error"
           placeholder="Required"
@@ -39,10 +39,19 @@
         <spk-number
           name="mynumber"
           id="mynumber"
-          label="my number"
+          label="spk-number"
           v-model="mynumber"
           placeholder="Your number"
         ></spk-number>
+      </div>
+      <div class="column-12">
+        <spk-checkbox
+          name="mycheck"
+          id="mycheck"
+          label="spk-checkbox"
+          value="sendMyCheck"
+          v-model="mycheck"
+        ></spk-checkbox>
       </div>
     </div>
   </section>
@@ -58,7 +67,8 @@ export default Vue.extend({
       example: '',
       example2: '',
       example3: '',
-      mynumber: 0
+      mynumber: 0,
+      mycheck: true
     };
   }
 });
