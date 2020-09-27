@@ -10,13 +10,16 @@ import { baseInputMixin } from '@/mixins/baseInputMixin';
 export default Vue.extend({
   name: 'SpkRadio',
   mixins: [baseInputMixin],
+  model: {
+    prop: 'activeValue',
+    event: 'onUpdateValue'
+  },
   props: {
-    vAlue: String
+    activeValue: String
   },
   methods: {
     updateValue() {
-      // TODO: This looks so wrong
-      this.$emit('input', this.vAlue);
+      this.$emit('onUpdateValue', this.$props.value);
     }
   }
 });

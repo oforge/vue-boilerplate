@@ -7,6 +7,9 @@
   injected multiple times.
  */
 module.exports = {
+  chainWebpack: (config) => {
+    config.plugins.delete('prefetch');
+  },
   css: {
     loaderOptions: {
       scss: {
