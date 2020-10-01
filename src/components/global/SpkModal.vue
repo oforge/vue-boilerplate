@@ -5,12 +5,12 @@
         <spk-button
           v-if="!isNotCloseable"
           class="modal__close-button button btn--ghost"
-          :class="modalState ? 'color--light' : 'color--dark'"
+          :class="state ? 'color--light' : 'color--dark'"
           @click.native="closeModal()"
         >
           <spk-icon iconClass="icon--cross" iconName="cross" />
         </spk-button>
-        <div class="modal__header p-l-s p-r-xxl" :class="modalState ? 'bg--' + modalState : ''">
+        <div class="modal__header p-l-s p-r-xxl" :class="state ? 'bg--' + state : ''">
           <slot name="header">
             <h3>
               Default header
@@ -52,7 +52,7 @@ export default Vue.extend({
       type: String,
       default: 's'
     },
-    modalState: {
+    state: {
       type: String
     }
   },

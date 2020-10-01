@@ -9,7 +9,7 @@
         <spk-button class="btn--primary" @click.native="showModal1 = true">Öffne Standard Modal</spk-button>
       </div>
       <div class="column-12">
-        <spk-modal v-if="showModal2" @close="showModal2 = false" modalState="success" size="l">
+        <spk-modal v-if="showModal2" @close="showModal2 = false" state="success" size="l">
           <template #header>
             <h3 class="color--light">Dies ist ein etwas längerer Header zum testen</h3>
           </template>
