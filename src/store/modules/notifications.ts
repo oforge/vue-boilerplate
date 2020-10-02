@@ -2,7 +2,7 @@ import { Module } from 'vuex';
 import { NotificationInterface } from '@/interfaces/notification.interface';
 
 const notifications: NotificationInterface[] = [];
-
+let timeoutHandler: number | undefined = 0;
 const notificationModule: Module<any, any> = {
   namespaced: true,
   state: {
@@ -19,13 +19,15 @@ const notificationModule: Module<any, any> = {
   },
   actions: {
     addNotification({ commit }, notification: NotificationInterface) {
-      console.log('notification', notification);
       if (!notification.duration) {
         notification.duration = 4000;
       }
-      console.log('notification after', notification);
       commit('ADD_NOTIFICATION', notification);
-      setTimeout(() => commit('REMOVE_NOTIFICATION', notification), notification.duration);
+      timeoutHandler = setTimeout(() => commit('REMOVE_NOTIFICATION', notification), notification.duration);
+    },
+    removeNotification({ commit }, notification: NotificationInterface) {
+      clearTimeout(timeoutHandler);
+      commit('REMOVE_NOTIFICATION', notification);
     }
   }
 };

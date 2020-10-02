@@ -49,7 +49,7 @@ export default Vue.extend({
   },
   methods: {
     closeNotification(notification: NotificationInterface) {
-      this.$store.commit('notificationModule/REMOVE_NOTIFICATION', notification);
+      this.$store.dispatch('notificationModule/removeNotification', notification);
     },
     getSize(notificationSize: string): string {
       if (notificationSize === 'm') {
