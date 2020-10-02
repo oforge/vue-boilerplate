@@ -14,6 +14,7 @@ export default class GlobalComponentLoader extends Vue {
     Vue.component('spk-checkbox', () => import(/* webpackChunkName: "globalComponents" */ './forms/SpkCheckbox.vue'));
     Vue.component('spk-radio', () => import(/* webpackChunkName: "globalComponents" */ './forms/SpkRadio.vue'));
     Vue.component('spk-modal', () => import(/* webpackChunkName: "globalComponents" */ './SpkModal.vue'));
+    Vue.component('spk-notification', () => import(/* webpackChunkName: "globalComponents" */ './SpkNotification.vue'));
     Vue.component('spk-sprite', () => import(/* webpackChunkName: "globalComponents" */ './SpkSprite.vue'));
   }
 }

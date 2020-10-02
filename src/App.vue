@@ -5,6 +5,7 @@
     <buttons-example></buttons-example>
     <modal-example></modal-example>
     <forms-example></forms-example>
+    <notification-example></notification-example>
     <spk-sprite />
   </div>
 </template>
@@ -16,6 +17,7 @@ import ColorsExample from '@/examples/ColorsExample.vue';
 import ButtonsExample from '@/examples/ButtonsExample.vue';
 import ModalExample from '@/examples/ModalExample.vue';
 import FormsExample from '@/examples/FormsExample.vue';
+import NotificationExample from '@/examples/NotificationExample.vue';
 
 export default Vue.extend({
   components: {
@@ -23,7 +25,8 @@ export default Vue.extend({
     'colors-example': ColorsExample,
     'buttons-example': ButtonsExample,
     'modal-example': ModalExample,
-    'forms-example': FormsExample
+    'forms-example': FormsExample,
+    'notification-example': NotificationExample
   }
 });
 </script>
