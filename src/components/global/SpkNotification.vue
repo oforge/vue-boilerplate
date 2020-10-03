@@ -1,6 +1,11 @@
 <template>
-  <div class="notification-wrapper" :class="getSize(size) + ' ' + getPosition(position)">
-    <div class="notification shadow--s" v-for="(notification, index) in notifications" :key="index">
+  <transition-group
+    name="slide"
+    tag="div"
+    class="notification-wrapper"
+    :class="getSize(size) + ' ' + getPosition(position)"
+  >
+    <div class="notification shadow--s" v-for="(notification, index) in notifications" :key="'e' + index">
       <spk-button
         class="notification__close-button button btn--ghost"
         :class="notification.state ? 'color--light' : 'color--dark'"
@@ -21,7 +26,7 @@
         {{ notification.message }}
       </p>
     </div>
-  </div>
+  </transition-group>
 </template>
 
 <script lang="ts">
@@ -113,5 +118,19 @@ export default Vue.extend({
 }
 .notification + .notification {
   margin-top: map-get($sizes, 's');
+}
+
+.slide-enter {
+  transform: translateY(100%);
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.2s ease-in;
+}
+.slide-leave-to {
+  transform: translateX(100%);
+}
+.slide-move {
+  transition: transform 0.2s ease-in;
 }
 </style>
