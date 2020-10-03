@@ -1,5 +1,5 @@
 import { Module } from 'vuex';
-import { NotificationInterface } from '@/interfaces/notification.interface';
+import { NotificationInterface } from '../../interfaces/notification.interface';
 
 const notifications: NotificationInterface[] = [];
 let timeoutHandler: number | undefined = 0;
