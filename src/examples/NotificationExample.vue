@@ -23,19 +23,19 @@ import { NotificationInterface } from '@/interfaces/notification.interface';
 
 const testNotifications: NotificationInterface[] = [
   {
-    id: Math.floor(Math.random() * Math.floor(1000)),
+    id: 1,
     state: '',
     title: 'Hi',
     message: 'This is a message!'
   },
   {
-    id: Math.floor(Math.random() * Math.floor(1000)),
+    id: 1,
     state: 'success',
     title: 'YESS!',
     message: 'Everything went perfect!'
   },
   {
-    id: Math.floor(Math.random() * Math.floor(1000)),
+    id: 1,
     state: 'error',
     title: 'Oh Noes!',
     message: 'This is is really bad!'
@@ -46,9 +46,13 @@ export default Vue.extend({
   name: 'NotificationExample',
   methods: {
     addNotification(duration?: number) {
-      console.log('duration', duration);
       const i: number = Math.floor(Math.random() * Math.floor(testNotifications.length));
-      const notification = testNotifications[i];
+      const notification: NotificationInterface = {
+        id: Math.floor(Math.random() * Math.floor(1000)),
+        message: testNotifications[i].message,
+        state: testNotifications[i].state,
+        title: testNotifications[i].title
+      };
       if (duration) {
         notification.duration = duration;
       }
