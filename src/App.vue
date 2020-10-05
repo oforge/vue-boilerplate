@@ -2,6 +2,8 @@
   <div id="app">
     <headlines-example></headlines-example>
     <colors-example></colors-example>
+    <links-example></links-example>
+    <grid-example></grid-example>
     <buttons-example></buttons-example>
     <modal-example></modal-example>
     <forms-example></forms-example>
@@ -18,6 +20,8 @@ import ButtonsExample from '@/examples/ButtonsExample.vue';
 import ModalExample from '@/examples/ModalExample.vue';
 import FormsExample from '@/examples/FormsExample.vue';
 import NotificationExample from '@/examples/NotificationExample.vue';
+import LinksExample from '@/examples/LinksExample.vue';
+import GridExample from '@/examples/GridExample.vue';
 
 export default Vue.extend({
   components: {
@@ -26,7 +30,9 @@ export default Vue.extend({
     'buttons-example': ButtonsExample,
     'modal-example': ModalExample,
     'forms-example': FormsExample,
-    'notification-example': NotificationExample
+    'notification-example': NotificationExample,
+    'links-example': LinksExample,
+    'grid-example': GridExample
   }
 });
 </script>
@@ -59,6 +65,18 @@ export default Vue.extend({
     border-bottom: 4px solid rgba(map-get($colors, 'secondary'), 1);
     background: rgba(map-get($colors, 'dark'), 0.8);
     color: map-get($fontColors, 'light');
+  }
+  pre {
+    display: block;
+    line-height: 1.5;
+    white-space: pre-wrap;
+  }
+
+  code {
+    background: map-get($colors, 'primary');
+    padding: .175rem .5rem;
+    border-radius: .5rem;
+    color: map-get($colors, 'light');
   }
 }
 </style>

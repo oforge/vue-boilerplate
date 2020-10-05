@@ -22,6 +22,8 @@ export default Vue.extend({
   appearance: none;
   border: 1px solid transparent;
   padding: map-get($sizes, 's') map-get($sizes, 'm');
+  font-weight: normal;
+  text-decoration: none;
 
   background: map-get($greyTones, 'light');
   color: map-get($fontColors, 'light');
@@ -122,6 +124,10 @@ export default Vue.extend({
   span {
     color: currentColor;
   }
+}
+
+a.btn {
+  display: inline-flex;
 }
 
 .btn-list {
