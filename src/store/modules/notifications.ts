@@ -22,7 +22,7 @@ const notificationModule: Module<any, any> = {
         notification.duration = 4000;
       }
       commit('ADD_NOTIFICATION', notification);
-      setTimeout(() => commit('REMOVE_NOTIFICATION', notification), notification.duration);
+      notification.timeoutId = setTimeout(() => commit('REMOVE_NOTIFICATION', notification), notification.duration);
     },
     removeNotification({ commit }, notification: NotificationInterface) {
       commit('REMOVE_NOTIFICATION', notification);
