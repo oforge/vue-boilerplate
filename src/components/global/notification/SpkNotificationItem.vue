@@ -27,6 +27,7 @@ import Vue from 'vue';
 import { NotificationInterface } from '../../../interfaces/notification.interface';
 // import { createNamespacedHelpers } from 'vuex';
 
+
 let notification!: NotificationInterface;
 export default Vue.extend({
   name: 'NotificationItem',
