@@ -5,7 +5,12 @@
     class="notification-wrapper"
     :class="getSize(size) + ' ' + getPosition(position)"
   >
-    <spk-notification-item class="notification shadow--s" v-for="notification in notifications" :key="notification.id" :data="notification">
+    <spk-notification-item
+      class="notification shadow--s"
+      v-for="notification in notifications"
+      :key="notification.id"
+      :data="notification"
+    >
     </spk-notification-item>
   </transition-group>
 </template>

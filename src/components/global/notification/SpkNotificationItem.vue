@@ -25,8 +25,6 @@
 <script lang="ts">
 import Vue from 'vue';
 import { NotificationInterface } from '../../../interfaces/notification.interface';
-// import { createNamespacedHelpers } from 'vuex';
-
 
 let notification!: NotificationInterface;
 export default Vue.extend({
@@ -51,7 +49,6 @@ export default Vue.extend({
     this.notification = this.data;
   },
   beforeDestroy() {
-    //console.log('timeoutid', this.notification.timeoutId);
     clearTimeout(this.notification.timeoutId);
   }
 });
