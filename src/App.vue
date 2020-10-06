@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <variables-example></variables-example>
+    <mixins-example></mixins-example>
+    <functions-example></functions-example>
     <headlines-example></headlines-example>
     <colors-example></colors-example>
+    <shadows-example></shadows-example>
     <links-example></links-example>
     <spacing-example></spacing-example>
     <flex-example></flex-example>
@@ -28,9 +31,13 @@ import GridExample from '@/examples/GridExample.vue';
 import SpacingExample from '@/examples/SpacingExample.vue';
 import FlexExample from '@/examples/FlexExample.vue';
 import VariablesExample from '@/examples/VariablesExample.vue';
+import MixinsExample from '@/examples/MixinsExample.vue';
+import FunctionsExample from '@/examples/FunctionsExample.vue';
+import ShadowsExample from '@/examples/ShadowsExample.vue';
 
 export default Vue.extend({
   components: {
+    ShadowsExample,
     'headlines-example': HeadlinesExample,
     'colors-example': ColorsExample,
     'buttons-example': ButtonsExample,
@@ -41,7 +48,10 @@ export default Vue.extend({
     'grid-example': GridExample,
     'spacing-example': SpacingExample,
     'flex-example': FlexExample,
-    'variables-example': VariablesExample
+    'variables-example': VariablesExample,
+    'mixins-example': MixinsExample,
+    'functions-example': FunctionsExample,
+    'shadows-example': ShadowsExample
   }
 });
 </script>
