@@ -82,6 +82,9 @@ sub,
 sup {
   font-size: map-get($fontSizes, 'xs');
 }
+strong {
+  font-weight: bold;
+}
 a:not(.btn) {
   color: map-get($colors, 'primary');
   font-weight: bold;
@@ -93,3 +96,4 @@ a:not(.btn) {
     color: map-get($colors, 'primary');
   }
 }
+

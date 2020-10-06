@@ -3,6 +3,8 @@
     <headlines-example></headlines-example>
     <colors-example></colors-example>
     <links-example></links-example>
+    <spacing-example></spacing-example>
+    <flex-example></flex-example>
     <grid-example></grid-example>
     <buttons-example></buttons-example>
     <modal-example></modal-example>
@@ -22,6 +24,8 @@ import FormsExample from '@/examples/FormsExample.vue';
 import NotificationExample from '@/examples/NotificationExample.vue';
 import LinksExample from '@/examples/LinksExample.vue';
 import GridExample from '@/examples/GridExample.vue';
+import SpacingExample from '@/examples/SpacingExample.vue';
+import FlexExample from '@/examples/FlexExample.vue';
 
 export default Vue.extend({
   components: {
@@ -32,7 +36,9 @@ export default Vue.extend({
     'forms-example': FormsExample,
     'notification-example': NotificationExample,
     'links-example': LinksExample,
-    'grid-example': GridExample
+    'grid-example': GridExample,
+    'spacing-example': SpacingExample,
+    'flex-example': FlexExample
   }
 });
 </script>
@@ -74,8 +80,8 @@ export default Vue.extend({
 
   code {
     background: map-get($colors, 'primary');
-    padding: .175rem .5rem;
-    border-radius: .5rem;
+    padding: 0.175rem 0.5rem;
+    border-radius: 0.5rem;
     color: map-get($colors, 'light');
   }
 }
