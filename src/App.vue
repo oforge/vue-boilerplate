@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <variables-example></variables-example>
     <headlines-example></headlines-example>
     <colors-example></colors-example>
     <links-example></links-example>
@@ -26,6 +27,7 @@ import LinksExample from '@/examples/LinksExample.vue';
 import GridExample from '@/examples/GridExample.vue';
 import SpacingExample from '@/examples/SpacingExample.vue';
 import FlexExample from '@/examples/FlexExample.vue';
+import VariablesExample from '@/examples/VariablesExample.vue';
 
 export default Vue.extend({
   components: {
@@ -38,7 +40,8 @@ export default Vue.extend({
     'links-example': LinksExample,
     'grid-example': GridExample,
     'spacing-example': SpacingExample,
-    'flex-example': FlexExample
+    'flex-example': FlexExample,
+    'variables-example': VariablesExample
   }
 });
 </script>
@@ -81,8 +84,14 @@ export default Vue.extend({
   code {
     background: map-get($colors, 'primary');
     padding: 0.175rem 0.5rem;
-    border-radius: 0.5rem;
     color: map-get($colors, 'light');
+    &.code--scss {
+      font-family: monospace;
+      font-size: 14px;
+      line-height: 1.4;
+      background: transparent;
+      color: map-get($colors, 'primary');
+    }
   }
 }
 </style>
