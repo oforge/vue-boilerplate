@@ -58,7 +58,7 @@ export default Vue.extend({
       background: darken(map-get($colors, 'secondary'), 5%);
     }
     &:active {
-      border: 1px solid lighten(map-get($colors, 'secondary'), 5%);
+      border: 1px solid lighten(map-get($colors, 'secondary'), 10%);
     }
   }
 
@@ -102,7 +102,7 @@ export default Vue.extend({
       background: darken(map-get($stateColors, 'success'), 5%);
     }
     &:active {
-      border: 1px solid lighten(map-get($stateColors, 'success'), 5%);
+      border: 1px solid lighten(map-get($stateColors, 'success'), 10%);
     }
   }
 
