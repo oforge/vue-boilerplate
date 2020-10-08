@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <p>{{ getDeviceSize }}</p>
     <variables-example></variables-example>
     <mixins-example></mixins-example>
     <functions-example></functions-example>
@@ -34,10 +35,13 @@ import VariablesExample from '@/examples/VariablesExample.vue';
 import MixinsExample from '@/examples/MixinsExample.vue';
 import FunctionsExample from '@/examples/FunctionsExample.vue';
 import ShadowsExample from '@/examples/ShadowsExample.vue';
+import { createNamespacedHelpers } from 'vuex';
+
+const { mapGetters } = createNamespacedHelpers('deviceModule');
 
 export default Vue.extend({
+  name: 'App',
   components: {
-    ShadowsExample,
     'headlines-example': HeadlinesExample,
     'colors-example': ColorsExample,
     'buttons-example': ButtonsExample,
@@ -52,6 +56,28 @@ export default Vue.extend({
     'mixins-example': MixinsExample,
     'functions-example': FunctionsExample,
     'shadows-example': ShadowsExample
+  },
+  data() {
+    return {
+      deviceWidth: 0
+    };
+  },
+  computed: {
+    ...mapGetters(['getDeviceSize'])
+  },
+  mounted() {
+    this.$nextTick(function() {
+      window.addEventListener('resize', this.setDeviceWidth);
+      this.setDeviceWidth();
+    });
+  },
+  methods: {
+    setDeviceWidth() {
+      this.$store.dispatch('deviceModule/setDeviceSize', document.documentElement.clientWidth);
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.setDeviceWidth);
   }
 });
 </script>
