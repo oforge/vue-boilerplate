@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <p>{{ getDeviceSize }}</p>
+    <section class="section m-b-0">
+      <p class="section__header m-b-0">
+        Device Size: {{ getDeviceSize }}
+      </p>
+    </section>
     <variables-example></variables-example>
     <mixins-example></mixins-example>
     <functions-example></functions-example>
