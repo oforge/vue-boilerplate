@@ -44,11 +44,12 @@ we will stick to that.
   should be outsourced to this place. E.g. grid layout classes, spacing utility classes, css-reset
   and so on.
   - We have an **`./src/interfaces`** folder. Here we will have our typescript interfaces.
-  The interfaces must follow this style:
-    - File name is `name.interface.ts`
-    - Class name is `NameInterface`
+
 
 ## Coding guides
+- The interfaces must follow this style:
+  - File name is `name.interface.ts`
+  - Class name is `NameInterface`
 - Keep templates simple. Instead of `<div v-if="foo == 1 && !foo.id < 3 && foo.name == 'hans'">` use a custom property or a method.
 That makes templates more readable.
 - Id Variables should be written `variableId` and not `variableID`
