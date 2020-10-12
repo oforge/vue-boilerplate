@@ -11,8 +11,8 @@ maintain and extend the code from others.
 or **VS Code**. Both IDE's have a very good Vue and TypeScript support.
 - We create projects based on the vue-cli.
 - We use the following cli configuration:
-  - Babel, TypeScript, Router, Vuex, CSS Pre-processors, Linter
-  - Class style component [ ]
+  - Babel[x], TypeScript[x], Router[x], Vuex[x], CSS Pre-processors[x], Linter[x]
+  - Class style component [x]
   - Use Babel along TypeScript [x]
   - Use history mode for Router [x]
   - SCSS with dart-sass [x]
@@ -24,7 +24,8 @@ or **VS Code**. Both IDE's have a very good Vue and TypeScript support.
   quotes:
     ```js
     module.exports = {
-      singleQuote: true
+      singleQuote: true,
+      printWidth: 120
     };
     ```
 - We use **single file components** as .vue files.
@@ -32,8 +33,8 @@ or **VS Code**. Both IDE's have a very good Vue and TypeScript support.
 - For Script, Style, and Vue based syntax inside Templates we will use **single
 quotes** as default quotes.
 - We put a semicolon at the end of a JavaScript / TypeScript statement.
-- For Vue 2 projects we use **`Vue.extend()`** for components. For Vue 3 projects we will use
-**`defineComponent()`**. As long as there will be no real class style component support for Vue 3,
+- ~~For Vue 2 projects we use **`Vue.extend()`** for components.~~ For Vue 3 projects we will use
+**`defineComponent()`**. As long as there will be no real class component support for Vue 3,
 we will stick to that.
 - The base folder structure is the one that is pre defined by **vue-cli**, except:
   - We have a **`./src/helper`** folder. This one is used for helper classes or helper functions.
@@ -42,3 +43,12 @@ we will stick to that.
   - We have a **`./src/styles`** folder. All global styling, that is not direcly part of any component,
   should be outsourced to this place. E.g. grid layout classes, spacing utility classes, css-reset
   and so on.
+  - We have an **`./src/interfaces`** folder. Here we will have our typescript interfaces.
+  The interfaces must follow this style:
+    - File name is `name.interface.ts`
+    - Class name is `NameInterface`
+
+## Coding guides
+- Keep templates simple. Instead of `<div v-if="foo == 1 && !foo.id < 3 && foo.name == 'hans'">` use a custom property or a method.
+That makes templates more readable.
+- Id Variables should be written `variableId` and not `variableID`
