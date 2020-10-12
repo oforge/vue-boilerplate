@@ -50,6 +50,13 @@ we will stick to that.
 - The interfaces must follow this style:
   - File name is `name.interface.ts`
   - Class name is `NameInterface`
-- Keep templates simple. Instead of `<div v-if="foo == 1 && !foo.id < 3 && foo.name == 'hans'">` use a custom property or a method.
+- Keep templates simple. Instead of:
+  ```vue
+  <div v-if="foo == 1 && !foo.id < 3 && foo.name == 'hans'">...</div>
+  ```
+  use a custom property or a method:
+    ```vue
+    <div v-if="isAllowedToDoStuff">...</div>
+    ```
 That makes templates more readable.
 - Id Variables should be written `variableId` and not `variableID`
