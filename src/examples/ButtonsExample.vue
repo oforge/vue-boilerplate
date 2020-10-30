@@ -20,10 +20,6 @@
           <span>Button with icon right</span>
           <spk-icon iconClass="icon--chevron icon--chevron-right" iconName="chevron" />
         </spk-button>
-        <spk-button class="bg--primary">
-          <div v-show="true" class="is-loading"></div>
-          <span class="is-invisible">Button</span>
-        </spk-button>
       </div>
     </div>
     <div class="row">

@@ -16,6 +16,7 @@
     <flex-example></flex-example>
     <grid-example></grid-example>
     <buttons-example></buttons-example>
+    <loading-example></loading-example>
     <modal-example></modal-example>
     <forms-example></forms-example>
     <notification-example></notification-example>
@@ -39,6 +40,7 @@ import VariablesExample from '@/examples/VariablesExample.vue';
 import MixinsExample from '@/examples/MixinsExample.vue';
 import FunctionsExample from '@/examples/FunctionsExample.vue';
 import ShadowsExample from '@/examples/ShadowsExample.vue';
+import LoadingExample from '@/examples/LoadingExample.vue';
 import { createNamespacedHelpers } from 'vuex';
 
 const { mapGetters } = createNamespacedHelpers('deviceModule');
@@ -59,7 +61,8 @@ export default Vue.extend({
     'variables-example': VariablesExample,
     'mixins-example': MixinsExample,
     'functions-example': FunctionsExample,
-    'shadows-example': ShadowsExample
+    'shadows-example': ShadowsExample,
+    'loading-example': LoadingExample
   },
   data() {
     return {
